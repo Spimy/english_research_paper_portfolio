@@ -4,11 +4,22 @@ This portfolio contains all the behind-the-scenes of the research paper. This in
 
 The portfolio was decided to be coded instead of using a platform like Google Sites, Wix, WordPress, etc. purely for the enjoyment of the process of developing a website.
 
-# Reasons for SvelteKit
+## Reasons for SvelteKit
 
 Due to deadline, something familiar needed to be used and therefore, SvelteKit was chosen. However, for a website like this, it is actually more suitable to use a static site generator (SSG) like [Gatsby](https://www.gatsbyjs.com/) or [Astro](https://astro.build).
 
-# Credits
+## Contribution to Code
+
+_This section is for my group members specifically. Therefore, if you are not a group member, do NOT try to contribute to this code. It is open sourced so that the code is available to our professor._
+
+It is important that you have `git` installed on your computer/laptop.
+
+**ALWAYS** `fork` the repo and work on a _separate branch_. Open a pull request for review before
+merging to main branch. This is to avoid code conflicts.
+
+Do **NOT** use the code directly from our shared folder on SharePoint. It's only there for the sake of organisation of our research paper project being all in one place.
+
+## Credits
 
 - Designer: Mohammad Shaan Ibne Javed Soyfoo
   - Wireframed the layout with [wireframe.cc](https://wireframe.cc)
