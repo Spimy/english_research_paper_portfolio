@@ -1,8 +1,7 @@
 <script lang="ts">
 	const maxFails = 1;
 	const winningEmoji = '7️⃣';
-	// Temporary for now
-	const slots = [winningEmoji, '💩', '🥺', '🥖'];
+	const slots = [winningEmoji, '💩', '🥺', '🥖', '🤑', '🤭', '👽', '🤡', '💂', '👨‍🎓', '👨‍💻'];
 
 	// Max length / size should be 3 (the items the slot rolled)
 	let result: string[] = [];
