@@ -1,10 +1,12 @@
 <script lang="ts">
+	const maxFails = 1;
 	const winningEmoji = '7️⃣';
 	// Temporary for now
 	const slots = [winningEmoji, '💩', '🥺', '🥖'];
 
 	// Max length / size should be 3 (the items the slot rolled)
 	let result: string[] = [];
+	let numFails = 0;
 	let hasWon = false;
 
 	function checkWin() {
@@ -17,17 +19,33 @@
 		return resultSet.size === 1 && resultSet.has(winningEmoji);
 	}
 
+	// Roll the slot machine
+	// Temporary code as this will change to work with animations later
 	function roll() {
 		// Reset result before rolling again
 		result = [];
 
-		const min = 0;
-		const max = 2;
-		for (let i = 0; i < max + 1; i++) {
-			const itemIndex = Math.floor(Math.random() * (max - min) + min);
-			result.push(slots[itemIndex]);
+		// If user has reached max fails then script a win
+		if (numFails === maxFails) {
+			for (let i = 0; i < 3; i++) {
+				result.push(winningEmoji);
+			}
+			numFails = 0; // Set number of failed attempts back to 0
+		} else {
+			// Only randomise if the user has not reached max fails
+			const min = 0;
+			const max = 2;
+
+			// Generate random emojis for the results array 3 times (because 3 slots)
+			for (let i = 0; i < max + 1; i++) {
+				// Generate a random number between min and max for the index of the slots array
+				const itemIndex = Math.floor(Math.random() * (max - min) + min);
+				result.push(slots[itemIndex]);
+			}
 		}
+
 		hasWon = checkWin();
+		if (!hasWon) numFails += 1;
 	}
 </script>
 
