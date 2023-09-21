@@ -34,10 +34,10 @@
 		} else {
 			// Only randomise if the user has not reached max fails
 			const min = 0;
-			const max = 2;
+			const max = slots.length;
 
 			// Generate random emojis for the results array 3 times (because 3 slots)
-			for (let i = 0; i < max + 1; i++) {
+			for (let i = 0; i < 3; i++) {
 				// Generate a random number between min and max for the index of the slots array
 				const itemIndex = Math.floor(Math.random() * (max - min) + min);
 				result.push(slots[itemIndex]);
