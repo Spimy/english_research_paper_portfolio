@@ -4,7 +4,7 @@
 	const slots = [winningEmoji, '💩', '🥺', '🥖', '🤑', '🤭', '👽', '🤡', '💂', '👨‍🎓', '👨‍💻'];
 
 	// Max length / size should be 3 (the items the slot rolled)
-	let result: string[] = [];
+	let result: string[] = ['', '', ''];
 	let numFails = 0;
 	let hasWon = false;
 
@@ -26,9 +26,7 @@
 
 		// If user has reached max fails then script a win
 		if (numFails === maxFails) {
-			for (let i = 0; i < 3; i++) {
-				result.push(winningEmoji);
-			}
+			result = [winningEmoji, winningEmoji, winningEmoji];
 			numFails = 0; // Set number of failed attempts back to 0
 		} else {
 			// Only randomise if the user has not reached max fails
@@ -39,7 +37,7 @@
 			for (let i = 0; i < 3; i++) {
 				// Generate a random number between min and max for the index of the slots array
 				const itemIndex = Math.floor(Math.random() * (max - min) + min);
-				result.push(slots[itemIndex]);
+				result[i] = slots[itemIndex];
 			}
 		}
 
@@ -48,16 +46,51 @@
 	}
 </script>
 
-{#if hasWon}
-	<h1>You have won</h1>
-{:else}
-	<h1>You have not won</h1>
-{/if}
+<div class="slot-machine">
+	<h1>
+		{#if hasWon}
+			You have won
+		{:else}
+			You have not won
+		{/if}
+	</h1>
 
-<button on:click={roll}>Roll</button>
-{#each result as emoji}
-	<div>{emoji}</div>
-{/each}
+	<div class="slot-machine__slots">
+		{#each result as emoji}
+			<div class="slot-machine__slots__slot">{emoji}</div>
+		{/each}
+	</div>
 
-<style>
+	<button class="slot-machine__btn" on:click={roll}>Roll</button>
+</div>
+
+<style lang="scss">
+	.slot-machine {
+		> * + * {
+			margin-block-start: 1rem;
+		}
+
+		&__slots {
+			display: flex;
+			justify-content: space-evenly;
+			gap: 1rem;
+
+			// TODO: will come back to this later
+			// For now, it KIND OF works
+			&__slot {
+				display: grid;
+				place-items: center;
+				font-size: 1.5rem;
+				background-color: gray;
+				height: 6rem;
+				width: 4rem;
+				overflow: hidden;
+				text-align: center;
+			}
+		}
+
+		&__btn {
+			cursor: pointer;
+		}
+	}
 </style>
