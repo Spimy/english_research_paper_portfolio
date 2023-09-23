@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { enhance } from '$app/forms';
+
 	const maxFails = 1;
 	const winningEmoji = '7️⃣';
 	const slots = [winningEmoji, '💩', '🥺', '🥖', '🤑', '🤭', '👽', '🤡', '💂', '👨‍🎓', '👨‍💻'];
@@ -7,6 +9,7 @@
 	let result: string[] = ['', '', ''];
 	let numFails = 0;
 	let hasWon = false;
+	let slotMachine: HTMLFormElement;
 
 	function checkWin() {
 		const resultSet = new Set(result);
@@ -22,11 +25,11 @@
 	// Temporary code as this will change to work with animations later
 	function roll() {
 		// Reset result before rolling again
-		result = [];
+		result = result.map(() => '');
 
 		// If user has reached max fails then script a win
 		if (numFails === maxFails) {
-			result = [winningEmoji, winningEmoji, winningEmoji];
+			result = result.map(() => winningEmoji);
 			numFails = 0; // Set number of failed attempts back to 0
 		} else {
 			// Only randomise if the user has not reached max fails
@@ -34,19 +37,26 @@
 			const max = slots.length;
 
 			// Generate random emojis for the results array 3 times (because 3 slots)
-			for (let i = 0; i < 3; i++) {
+			result = result.map(() => {
 				// Generate a random number between min and max for the index of the slots array
 				const itemIndex = Math.floor(Math.random() * (max - min) + min);
-				result[i] = slots[itemIndex];
-			}
+				return slots[itemIndex];
+			});
 		}
 
 		hasWon = checkWin();
-		if (!hasWon) numFails += 1;
+		if (hasWon) return slotMachine.requestSubmit();
+		numFails += 1;
 	}
 </script>
 
-<div class="slot-machine">
+<form
+	bind:this={slotMachine}
+	method="post"
+	action="?/slotMachineWin"
+	class="slot-machine"
+	use:enhance
+>
 	<h1>
 		{#if hasWon}
 			You have won
@@ -61,8 +71,8 @@
 		{/each}
 	</div>
 
-	<button class="slot-machine__btn" on:click={roll}>Roll</button>
-</div>
+	<button on:click|preventDefault class="slot-machine__btn" on:click={roll}>Roll</button>
+</form>
 
 <style lang="scss">
 	.slot-machine {
