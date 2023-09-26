@@ -10,7 +10,7 @@
 					{#if page.url}
 						<a class="navbar__menu__item--link" href={page.url}>
 							{#if page.title === 'Home'}
-								<img src="/logo.png" alt="Sunway Logo" />
+								<img class="navbar__menu__item--link__img" src="/logo.png" alt="Sunway Logo" />
 							{:else}
 								{page.title}
 							{/if}
@@ -30,12 +30,20 @@
 	.navbar {
 		&__menu {
 			padding: 0;
+			margin: 0;
 			display: flex;
 			justify-content: space-evenly;
 			align-items: center;
 			background-color: green;
 
 			&__item {
+				&--link {
+					&__img {
+						width: 8rem;
+						height: 100%;
+					}
+				}
+
 				&--dropdown {
 					cursor: pointer;
 					background: none;
