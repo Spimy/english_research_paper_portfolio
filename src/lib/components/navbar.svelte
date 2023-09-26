@@ -29,7 +29,7 @@
 
 	.navbar {
 		&__menu {
-			padding: 0;
+			padding: 0.5rem 0;
 			margin: 0;
 			display: flex;
 			justify-content: space-evenly;
