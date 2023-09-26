@@ -9,12 +9,11 @@
 </script>
 
 <!-- TODO: Slow down the switch from modal to content on pass -->
-{#if data.passed === 'true'}
-	<slot />
-{:else}
-	<Modal bgText={`You must win the slot machine in order to enter the portfolio. ${data.passed}`}>
-		<SlotMachine />
-	</Modal>
+{#if data.passed !== 'true'}
+<Modal bgText={`You must win the slot machine in order to enter the portfolio. ${data.passed}`}>
+	<SlotMachine />
+</Modal>
+<slot />
 {/if}
 
 <style>
