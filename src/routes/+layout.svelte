@@ -8,6 +8,7 @@
 	console.log(data);
 </script>
 
+<!-- TODO: Slow down the switch from modal to content on pass -->
 {#if data.passed === 'true'}
 	<slot />
 {:else}
