@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Modal from '$lib/components/modal.svelte';
+	import Navbar from '$lib/components/navbar.svelte';
 	import SlotMachine from '$lib/components/slot-machine.svelte';
 	import '../scss/main.scss';
 	import type { LayoutServerData } from './$types';
@@ -14,6 +15,7 @@
 	</Modal>
 {/if}
 
+<Navbar />
 <slot />
 
 <style>
