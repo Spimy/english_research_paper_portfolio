@@ -20,7 +20,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
-		background-color: hsla(0, 0%, 0%, 0.5);
+		background-color: hsla(0, 0%, 0%, 0.2);
 		background-blend-mode: multiply;
 		height: 100svh;
 		display: grid;
