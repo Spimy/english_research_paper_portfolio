@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<div class="hero">
+<section class="hero">
 	<div class="content">
 		<h1>Online Gambling</h1>
 		<p>
@@ -11,9 +11,9 @@
 		</p>
 		<a href="#about" class="btn">About</a>
 	</div>
-</div>
+</section>
 
-<div id="about" class="about">
+<section id="about" class="about">
 	<h1>About</h1>
 	<p>
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
@@ -65,7 +65,7 @@
 		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
 		dolor repellat obcaecati. Vitae, voluptatum porro!
 	</p>
-</div>
+</section>
 
 <style lang="scss">
 	.hero {
