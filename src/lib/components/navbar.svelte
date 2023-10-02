@@ -42,6 +42,10 @@
 		position: absolute;
 		width: 100%;
 
+		@include mq(small) {
+			padding: 0 var(--content-padding);
+		}
+
 		ul {
 			padding: 0.5rem 0;
 			margin: 0;
@@ -49,8 +53,13 @@
 
 		&__menu {
 			display: flex;
+			justify-content: space-between;
 			justify-content: space-evenly;
 			align-items: center;
+
+			@include mq(small) {
+				justify-content: space-between;
+			}
 
 			&--link {
 				&__img {
