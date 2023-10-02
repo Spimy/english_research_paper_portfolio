@@ -1,11 +1,17 @@
 <script lang="ts">
 </script>
 
-<main>
-	<div class="hero">
+<div class="hero">
+	<div class="content">
 		<h1>Online Gambling</h1>
+		<p>
+			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt itaque, molestias voluptatem
+			obcaecati temporibus dignissimos praesentium repellendus corporis sit aliquid laborum magnam
+			incidunt laudantium est nulla eaque molestiae doloribus? Quibusdam!
+		</p>
+		<a href="#about" class="btn">About</a>
 	</div>
-</main>
+</div>
 
 <style lang="scss">
 	.hero {
@@ -17,6 +23,16 @@
 		background-blend-mode: multiply;
 		height: 100svh;
 		display: grid;
-		place-items: center;
+		align-items: center;
+		margin: 0 calc(var(--content-padding) * -1);
+		padding: 0 var(--content-padding);
+
+		.content {
+			max-width: 75ch;
+
+			> * {
+				margin-block-start: 1rem;
+			}
+		}
 	}
 </style>
