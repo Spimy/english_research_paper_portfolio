@@ -14,7 +14,13 @@
 {/if} -->
 
 <Navbar />
-<slot />
 
-<style>
+<main>
+	<slot />
+</main>
+
+<style lang="scss">
+	main {
+		padding: 0 var(--content-padding);
+	}
 </style>
