@@ -92,8 +92,6 @@
 					display: none;
 					border-radius: 0.2rem;
 
-					$menu: &;
-
 					&:hover,
 					&:focus {
 						display: block;
@@ -101,12 +99,6 @@
 
 					&--link {
 						margin: 1rem;
-
-						&:focus {
-							#{$menu} {
-								display: block;
-							}
-						}
 					}
 				}
 			}
