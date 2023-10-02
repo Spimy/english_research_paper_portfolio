@@ -1,5 +1,8 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { pages } from '$lib/page';
+
+	$: path = $page.url.pathname;
 </script>
 
 <div class="navbar">
@@ -8,7 +11,11 @@
 			{#each pages as page, index (index)}
 				<li>
 					{#if page.url}
-						<a class="navbar__menu--link" href={page.url}>
+						<a
+							class="navbar__menu--link"
+							href={page.url}
+							aria-current={path === page.url ? 'page' : undefined}
+						>
 							{#if page.title === 'Home'}
 								<img class="navbar__menu--link__img" src="/logo.png" alt="Sunway Logo" />
 							{:else}
@@ -21,7 +28,11 @@
 							<ul role="list" class="navbar__menu--dropdown__menu">
 								{#each page.dropdown || [] as dropdown, i (i)}
 									<li>
-										<a class="navbar__menu--dropdown__menu--link" href={dropdown.url}>
+										<a
+											class="navbar__menu--dropdown__menu--link"
+											href={dropdown.url}
+											aria-current={path === dropdown.url ? 'page' : undefined}
+										>
 											{dropdown.title}
 										</a>
 									</li>
@@ -65,10 +76,16 @@
 				&__img {
 					width: 8rem;
 					height: 100%;
+					// filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0));
 
 					&:focus {
 						outline: 1rem solid black;
 					}
+				}
+
+				&[aria-current='page'] {
+					filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0));
+					text-shadow: 0 0 0.75rem rgb(255, 217, 0);
 				}
 			}
 
@@ -113,6 +130,10 @@
 
 					&--link {
 						margin: 1rem;
+
+						&[aria-current='page'] {
+							color: orange;
+						}
 					}
 				}
 			}
