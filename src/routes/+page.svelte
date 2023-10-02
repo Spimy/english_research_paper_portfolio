@@ -15,6 +15,7 @@
 
 <style lang="scss">
 	.hero {
+		font-size: var(--fs-400);
 		background-image: url('/hero.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
