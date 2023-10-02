@@ -39,15 +39,18 @@
 	@use '../../scss/abstracts/mixins' as *;
 
 	.navbar {
+		position: absolute;
+		width: 100%;
+
 		ul {
 			padding: 0.5rem 0;
 			margin: 0;
 		}
+
 		&__menu {
 			display: flex;
 			justify-content: space-evenly;
 			align-items: center;
-			background-color: green;
 
 			&--link {
 				&__img {
@@ -70,9 +73,10 @@
 					background: none;
 					border: none;
 					position: relative;
+					color: inherit;
 
 					&::after {
-						@include south-facing-triangle(black);
+						@include south-facing-triangle(var(--clr-neutral-100));
 						position: absolute;
 						right: 0;
 						top: 50%;
@@ -87,7 +91,8 @@
 
 				&__menu {
 					position: absolute;
-					background-color: red;
+					color: var(--clr-neutral-200);
+					background-color: var(--clr-neutral-100);
 					width: max-content;
 					display: none;
 					border-radius: 0.2rem;
