@@ -13,6 +13,60 @@
 	</div>
 </div>
 
+<div id="about" class="about">
+	<h1>About</h1>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
+		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
+		dolor repellat obcaecati. Vitae, voluptatum porro!
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
+		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
+		dolor repellat obcaecati. Vitae, voluptatum porro!
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
+		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
+		dolor repellat obcaecati. Vitae, voluptatum porro!
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
+		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
+		dolor repellat obcaecati. Vitae, voluptatum porro!
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
+		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
+		dolor repellat obcaecati. Vitae, voluptatum porro!
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
+		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
+		dolor repellat obcaecati. Vitae, voluptatum porro!
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
+		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
+		dolor repellat obcaecati. Vitae, voluptatum porro!
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
+		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
+		dolor repellat obcaecati. Vitae, voluptatum porro!
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
+		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
+		dolor repellat obcaecati. Vitae, voluptatum porro!
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
+		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
+		dolor repellat obcaecati. Vitae, voluptatum porro!
+	</p>
+</div>
+
 <style lang="scss">
 	.hero {
 		font-size: var(--fs-400);
@@ -35,5 +89,11 @@
 				margin-block-start: 1rem;
 			}
 		}
+	}
+
+	.about {
+		background-color: #003e1f;
+		margin: 0 calc(var(--content-padding) * -1);
+		padding: 1rem var(--content-padding);
 	}
 </style>
