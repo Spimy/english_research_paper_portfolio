@@ -40,8 +40,8 @@
 		--content-padding: 5rem;
 	}
 
-	color: var(--theme-text);
-	background-color: var(--theme-background);
+	color: var(--clr-neutral-100);
+	background-color: var(--clr-neutral-200);
 	transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
 
 	a {
