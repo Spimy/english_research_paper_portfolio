@@ -20,7 +20,4 @@
 </main>
 
 <style lang="scss">
-	main {
-		padding: 0 var(--content-padding);
-	}
 </style>

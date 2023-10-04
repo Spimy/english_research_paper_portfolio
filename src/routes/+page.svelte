@@ -79,7 +79,6 @@
 		height: 100svh;
 		display: grid;
 		align-items: center;
-		margin: 0 calc(var(--content-padding) * -1);
 		padding: 0 var(--content-padding);
 
 		.content {
@@ -93,7 +92,6 @@
 
 	.about {
 		background-color: #003e1f;
-		margin: 0 calc(var(--content-padding) * -1);
 		padding: 1rem var(--content-padding);
 	}
 </style>
