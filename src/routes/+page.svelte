@@ -15,59 +15,31 @@
 
 <section id="about" class="about">
 	<h1>About</h1>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
-		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
-		dolor repellat obcaecati. Vitae, voluptatum porro!
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
-		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
-		dolor repellat obcaecati. Vitae, voluptatum porro!
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
-		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
-		dolor repellat obcaecati. Vitae, voluptatum porro!
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
-		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
-		dolor repellat obcaecati. Vitae, voluptatum porro!
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
-		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
-		dolor repellat obcaecati. Vitae, voluptatum porro!
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
-		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
-		dolor repellat obcaecati. Vitae, voluptatum porro!
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
-		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
-		dolor repellat obcaecati. Vitae, voluptatum porro!
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
-		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
-		dolor repellat obcaecati. Vitae, voluptatum porro!
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
-		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
-		dolor repellat obcaecati. Vitae, voluptatum porro!
-	</p>
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere illum totam recusandae tenetur
-		eligendi sequi assumenda eius expedita dignissimos distinctio, ducimus, earum quibusdam odio
-		dolor repellat obcaecati. Vitae, voluptatum porro!
-	</p>
+	<div class="about__content">
+		<p class="about__content__description">
+			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi ducimus ex autem deleniti,
+			laboriosam nulla rerum laborum harum eum doloribus, architecto similique animi suscipit dicta,
+			obcaecati culpa nam eligendi. Voluptas? Expedita minus, eum deleniti consectetur cumque
+			facilis eaque, est porro quisquam voluptas suscipit perspiciatis nisi maxime quod. Rem id
+			veritatis harum dolorem architecto hic aspernatur sapiente, veniam repudiandae cum minima.
+			Saepe facilis reiciendis omnis vel quia! Reiciendis debitis accusantium sit nesciunt dolores
+			rerum doloremque impedit eveniet cupiditate explicabo enim, facilis esse adipisci, voluptas
+			aliquam fugiat ratione accusamus officiis officia ducimus. Sed libero aspernatur soluta error
+			aut dicta fugit, expedita tenetur doloremque non cupiditate minus sapiente atque! Saepe, modi
+			veritatis. Assumenda nesciunt, porro autem beatae odio ratione commodi unde aperiam accusamus.
+			Corrupti aperiam tempore non eligendi, facilis, et perspiciatis animi veritatis laboriosam
+			consequatur aspernatur? Ea doloribus veritatis fugit. Iure quidem, voluptatem aspernatur fugit
+			iste eius sint et dicta earum velit voluptates!
+		</p>
+		<img src="/about.avif" alt="the group 'gambling' because irony is funny" />
+	</div>
 </section>
 
 <style lang="scss">
+	h1 {
+		font-size: var(--fs-700);
+	}
+
 	.hero {
 		font-size: var(--fs-400);
 		background-image: url('/hero.jpg');
@@ -84,7 +56,7 @@
 		.content {
 			max-width: 75ch;
 
-			> * {
+			> * + * {
 				margin-block-start: 1rem;
 			}
 		}
@@ -93,5 +65,27 @@
 	.about {
 		background-color: #003e1f;
 		padding: 1rem var(--content-padding);
+
+		> * + * {
+			margin-block: 1rem;
+		}
+
+		&__content {
+			display: flex;
+			justify-content: space-between;
+
+			&__description {
+				line-height: 1.75rem;
+				text-align: justify;
+				max-width: 75ch;
+			}
+
+			img {
+				background-color: red;
+				width: 30rem;
+				height: auto;
+				object-fit: cover;
+			}
+		}
 	}
 </style>
