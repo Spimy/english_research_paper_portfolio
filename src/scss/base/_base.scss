@@ -3,8 +3,10 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/type-scale' as *;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,600;0,700;1,100;1,400&display=swap');
+
 :root {
-	// TODO: Set font-family
+	font-family: 'Poppins', sans-serif;
 
 	@each $color, $shades in $colors {
 		@each $shade, $value in $shades {
