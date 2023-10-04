@@ -3,7 +3,7 @@
 
 <section class="hero">
 	<div class="content">
-		<h1>Online Gambling</h1>
+		<h1>International Governments Should Sanction Online Gambling amongst the Youth.</h1>
 		<p>
 			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt itaque, molestias voluptatem
 			obcaecati temporibus dignissimos praesentium repellendus corporis sit aliquid laborum magnam
@@ -37,11 +37,10 @@
 
 <style lang="scss">
 	h1 {
-		font-size: var(--fs-700);
+		font-size: var(--fs-600);
 	}
 
 	.hero {
-		font-size: var(--fs-400);
 		background-image: url('/hero.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -54,7 +53,9 @@
 		padding: 0 var(--content-padding);
 
 		.content {
-			max-width: 75ch;
+			p {
+				max-width: 75ch;
+			}
 
 			> * + * {
 				margin-block-start: 1rem;
@@ -63,7 +64,7 @@
 	}
 
 	.about {
-		background-color: #003e1f;
+		background-color: var(--clr-background-200);
 		padding: 1rem var(--content-padding);
 
 		> * + * {
