@@ -1,5 +1,17 @@
-// TODO: Set up colors dictionary
 $colors: (
+	background: (
+		100: hsl(150, 100%, 12%),
+		200: hsl(154, 89%, 4%)
+	),
+	text: (
+		100: hsl(149, 53%, 89%)
+	),
+	accent: (
+		100: hsl(154, 34%, 59%)
+	),
+	cta: (
+		100: hsl(12, 89%, 39%)
+	),
 	neutral: (
 		100: hsl(0, 0%, 100%),
 		200: hsl(0, 0%, 0%)
