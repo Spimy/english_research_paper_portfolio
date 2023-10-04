@@ -71,6 +71,10 @@
 			margin-block: 1rem;
 		}
 
+		h1 {
+			text-transform: uppercase;
+		}
+
 		&__content {
 			display: flex;
 			justify-content: space-between;
