@@ -84,8 +84,8 @@
 				}
 
 				&[aria-current='page'] {
-					filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0));
-					text-shadow: 0 0 0.75rem rgb(255, 217, 0);
+					filter: drop-shadow(0 0 0.75rem var(--clr-accent-100));
+					text-shadow: 0 0 0.75rem var(--clr-accent-100);
 				}
 			}
 
@@ -132,7 +132,7 @@
 						margin: 1rem;
 
 						&[aria-current='page'] {
-							color: orange;
+							color: var(--clr-accent-100);
 						}
 					}
 				}
