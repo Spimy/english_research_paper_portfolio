@@ -1,4 +1,6 @@
 <script lang="ts">
+	import PokerCard, { CardSuit } from '$lib/components/poker-card.svelte';
+	import { pages } from '$lib/page';
 </script>
 
 <section class="hero">
@@ -32,6 +34,32 @@
 			iste eius sint et dicta earum velit voluptates!
 		</p>
 		<img src="/about.avif" alt="the group 'gambling' because irony is funny" />
+	</div>
+</section>
+
+<!-- toc == table of contents -->
+<section class="toc">
+	<h1>Table of Contents</h1>
+	<div class="toc__content">
+		{#each pages as page}
+			{#if page.title !== 'Home'}
+				{#if page.url}
+					<a href={page.url}>
+						<PokerCard cardSetting={{ display: 'K', suit: CardSuit.SPADES }}>
+							{page.title}
+						</PokerCard>
+					</a>
+				{:else}
+					{#each page.dropdown || [] as dropdown}
+						<a href={dropdown.url}>
+							<PokerCard cardSetting={{ display: 'K', suit: CardSuit.SPADES }}>
+								{dropdown.title}
+							</PokerCard>
+						</a>
+					{/each}
+				{/if}
+			{/if}
+		{/each}
 	</div>
 </section>
 
@@ -91,6 +119,17 @@
 				height: auto;
 				object-fit: cover;
 			}
+		}
+	}
+
+	.toc {
+		background-color: var(--clr-background-100);
+		padding: 1rem var(--content-padding);
+
+		&__content {
+			display: grid;
+			gap: 1rem;
+			grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
 		}
 	}
 </style>
