@@ -45,14 +45,14 @@
 			{#if page.title !== 'Home'}
 				{#if page.url}
 					<a href={page.url}>
-						<PokerCard cardSetting={{ display: 'K', suit: '♠' }}>
+						<PokerCard cardSetting={page.cardSetting || { display: 'K', suit: '♠' }}>
 							{page.title}
 						</PokerCard>
 					</a>
 				{:else}
 					{#each page.dropdown || [] as dropdown}
 						<a href={dropdown.url}>
-							<PokerCard cardSetting={{ display: 'K', suit: '♥' }}>
+							<PokerCard cardSetting={dropdown.cardSetting || { display: 'K', suit: '♠' }}>
 								{dropdown.title}
 							</PokerCard>
 						</a>
