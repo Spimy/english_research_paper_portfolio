@@ -86,7 +86,7 @@
 						span {
 							display: block;
 							font-size: 5rem;
-							line-height: 1rem;
+							line-height: 2rem;
 						}
 					}
 
