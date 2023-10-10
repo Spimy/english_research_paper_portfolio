@@ -138,6 +138,7 @@
 
 		&__content {
 			display: grid;
+			place-items: center;
 			gap: 1rem;
 			grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
 		}
