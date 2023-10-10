@@ -19,6 +19,12 @@
 <div class="card">
 	<div class="card__content">
 		<div class="card__content--front">
+			<div class="card__content--front__suit--top">
+				{cardSetting.display}<span>{cardSetting.suit}</span>
+			</div>
+			<div class="card__content--front__suit--bottom">
+				{cardSetting.display}<span>{cardSetting.suit}</span>
+			</div>
 			<slot />
 		</div>
 		<div class="card__content--back" />
@@ -57,6 +63,7 @@
 			}
 
 			&--front {
+				font-size: 3rem;
 				background: white;
 				background-image: repeating-linear-gradient(
 						to right,
@@ -67,6 +74,32 @@
 					),
 					linear-gradient(to bottom left, rgba(233, 233, 233, 0.483), rgba(255, 255, 255, 0.05));
 				background-size: 0.65em 0.65em;
+
+				&__suit {
+					&--top,
+					&--bottom {
+						position: absolute;
+
+						span {
+							display: block;
+							font-size: 5rem;
+							line-height: 1rem;
+						}
+					}
+
+					&--top {
+						top: 0;
+						left: 1rem;
+					}
+
+					&--bottom {
+						bottom: 0;
+						right: 1rem;
+						-webkit-transform: rotate(180deg) perspective(0);
+						-moz-transform: rotate(180deg) perspective(0);
+						transform: rotate(180deg) perspective(0);
+					}
+				}
 			}
 
 			&--back {
