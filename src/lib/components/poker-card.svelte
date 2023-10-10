@@ -1,13 +1,6 @@
 <script lang="ts" context="module">
-	export enum CardSuit {
-		CLUBS = '♣',
-		DIAMONDS = '♦',
-		HEARTS = '♥',
-		SPADES = '♠'
-	}
-
 	export interface PokerCard {
-		suit: CardSuit;
+		suit: '♠' | '♥' | '♣' | '♦';
 		display: 'A' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | 'J' | 'Q' | 'K';
 	}
 </script>
@@ -20,7 +13,7 @@
 	<div class="card__content">
 		<div
 			class="card__content--front"
-			class:red={cardSetting.suit === CardSuit.DIAMONDS || cardSetting.suit === CardSuit.HEARTS}
+			class:red={cardSetting.suit === '♥' || cardSetting.suit === '♦'}
 		>
 			<div class="card__content--front__suit--top">
 				{cardSetting.display}<span>{cardSetting.suit}</span>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PokerCard, { CardSuit } from '$lib/components/poker-card.svelte';
+	import PokerCard from '$lib/components/poker-card.svelte';
 	import { pages } from '$lib/page';
 </script>
 
@@ -45,14 +45,14 @@
 			{#if page.title !== 'Home'}
 				{#if page.url}
 					<a href={page.url}>
-						<PokerCard cardSetting={{ display: 'K', suit: CardSuit.SPADES }}>
+						<PokerCard cardSetting={{ display: 'K', suit: '♠' }}>
 							{page.title}
 						</PokerCard>
 					</a>
 				{:else}
 					{#each page.dropdown || [] as dropdown}
 						<a href={dropdown.url}>
-							<PokerCard cardSetting={{ display: 'K', suit: CardSuit.SPADES }}>
+							<PokerCard cardSetting={{ display: 'K', suit: '♥' }}>
 								{dropdown.title}
 							</PokerCard>
 						</a>
