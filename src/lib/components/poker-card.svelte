@@ -70,8 +70,10 @@
 			}
 
 			&--back {
-				background: linear-gradient(to left, var(--clr-neutral-100) 50%, var(--clr-cta-100) 50%);
-				background-size: 5%;
+				background-image: url('/card-back.png');
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
 				color: var(--clr-neutral-100);
 				transform: rotateY(180deg);
 			}
