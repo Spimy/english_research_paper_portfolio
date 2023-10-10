@@ -76,7 +76,6 @@
 				&__img {
 					width: 8rem;
 					height: 100%;
-					// filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0));
 
 					&:focus {
 						outline: 1rem solid black;
