@@ -32,7 +32,10 @@
 </div>
 
 <style lang="scss">
+	@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
 	.card {
+		font-family: 'Alfa Slab One', cursive;
 		position: relative;
 		width: 20rem;
 		height: 30rem;
