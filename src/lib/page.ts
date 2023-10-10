@@ -1,21 +1,24 @@
 import type { Page } from '$lib/types/page';
 
 export const pages: Page[] = [
-	{ title: 'Roadmap', url: '/roadmap' },
+	{ title: 'Roadmap', url: '/roadmap', cardSetting: { display: 'J', suit: '♦' } },
 	{
 		title: 'Planning',
 		dropdown: [
 			{
 				title: 'Outline',
-				url: '/outline'
+				url: '/outline',
+				cardSetting: { display: 'Q', suit: '♣' }
 			},
 			{
 				title: 'Written Response',
-				url: '/written-response'
+				url: '/written-response',
+				cardSetting: { display: 'K', suit: '♥' }
 			},
 			{
 				title: 'Draft',
-				url: '/draft'
+				url: '/draft',
+				cardSetting: { display: 'A', suit: '♠' }
 			}
 		]
 	},
@@ -25,17 +28,20 @@ export const pages: Page[] = [
 		dropdown: [
 			{
 				title: 'Sources',
-				url: '/sources'
+				url: '/sources',
+				cardSetting: { display: 'J', suit: '♦' }
 			},
 			{
 				title: 'Output',
-				url: '/output'
+				url: '/output',
+				cardSetting: { display: 'Q', suit: '♣' }
 			},
 			{
 				title: 'Reflection',
-				url: '/reflection'
+				url: '/reflection',
+				cardSetting: { display: 'K', suit: '♥' }
 			}
 		]
 	},
-	{ title: 'Feedback', url: '/feedback' }
+	{ title: 'Feedback', url: '/feedback', cardSetting: { display: 'A', suit: '♠' } }
 ];
