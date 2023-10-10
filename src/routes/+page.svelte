@@ -64,6 +64,8 @@
 </section>
 
 <style lang="scss">
+	@use '../scss/abstracts/mixins' as *;
+
 	h1 {
 		font-size: var(--fs-600);
 	}
@@ -104,13 +106,21 @@
 		}
 
 		&__content {
-			display: flex;
-			justify-content: space-between;
+			@include mq(large) {
+				display: flex;
+				justify-content: space-between;
+				gap: 1rem;
+			}
 
 			&__description {
 				line-height: 1.75rem;
 				text-align: justify;
 				max-width: 75ch;
+				margin-bottom: 1rem;
+
+				@include mq(large) {
+					margin: 0;
+				}
 			}
 
 			img {
