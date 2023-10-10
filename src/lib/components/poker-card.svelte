@@ -18,7 +18,10 @@
 
 <div class="card">
 	<div class="card__content">
-		<div class="card__content--front">
+		<div
+			class="card__content--front"
+			class:red={cardSetting.suit === CardSuit.DIAMONDS || cardSetting.suit === CardSuit.HEARTS}
+		>
 			<div class="card__content--front__suit--top">
 				{cardSetting.display}<span>{cardSetting.suit}</span>
 			</div>
@@ -77,6 +80,10 @@
 					),
 					linear-gradient(to bottom left, rgba(233, 233, 233, 0.483), rgba(255, 255, 255, 0.05));
 				background-size: 0.65em 0.65em;
+
+				&.red {
+					color: var(--clr-cta-100);
+				}
 
 				&__suit {
 					&--top,
