@@ -44,18 +44,17 @@
 		{#each pages as page}
 			{#if page.title !== 'Home'}
 				{#if page.url}
-					<a href={page.url}>
-						<PokerCard cardSetting={page.cardSetting || { display: 'K', suit: '♠' }}>
-							{page.title}
-						</PokerCard>
-					</a>
+					<PokerCard link={page.url} cardSetting={page.cardSetting || { display: 'K', suit: '♠' }}>
+						{page.title}
+					</PokerCard>
 				{:else}
 					{#each page.dropdown || [] as dropdown}
-						<a href={dropdown.url}>
-							<PokerCard cardSetting={dropdown.cardSetting || { display: 'K', suit: '♠' }}>
-								{dropdown.title}
-							</PokerCard>
-						</a>
+						<PokerCard
+							link={dropdown.url ?? ''}
+							cardSetting={dropdown.cardSetting || { display: 'K', suit: '♠' }}
+						>
+							{dropdown.title}
+						</PokerCard>
 					{/each}
 				{/if}
 			{/if}

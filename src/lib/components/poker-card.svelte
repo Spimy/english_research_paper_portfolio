@@ -7,28 +7,44 @@
 
 <script lang="ts">
 	export let cardSetting: PokerCard;
+	export let link: string;
 </script>
 
-<div class="card">
-	<div class="card__content">
-		<div
-			class="card__content--front"
-			class:red={cardSetting.suit === '♥' || cardSetting.suit === '♦'}
-		>
-			<div class="card__content--front__suit--top">
-				{cardSetting.display}<span>{cardSetting.suit}</span>
+<a href={link}>
+	<div class="card">
+		<div class="card__content">
+			<div
+				class="card__content--front"
+				class:red={cardSetting.suit === '♥' || cardSetting.suit === '♦'}
+			>
+				<div class="card__content--front__suit--top">
+					{cardSetting.display}<span>{cardSetting.suit}</span>
+				</div>
+				<div class="card__content--front__suit--bottom">
+					{cardSetting.display}<span>{cardSetting.suit}</span>
+				</div>
+				<slot />
 			</div>
-			<div class="card__content--front__suit--bottom">
-				{cardSetting.display}<span>{cardSetting.suit}</span>
-			</div>
-			<slot />
+			<div class="card__content--back" />
 		</div>
-		<div class="card__content--back" />
 	</div>
-</div>
+</a>
 
 <style lang="scss">
 	@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+	a:hover,
+	a:focus {
+		.card {
+			transform: scale(100%);
+		}
+
+		.card__content,
+		.card__content {
+			transform: rotateY(360deg);
+			transition: transform 750ms ease-in-out;
+		}
+	}
 
 	.card {
 		font-family: 'Alfa Slab One', cursive;
@@ -117,14 +133,5 @@
 
 		transform: scale(90%);
 		transition: transform 750ms ease-in-out;
-
-		&:hover {
-			transform: scale(100%);
-		}
-
-		&:hover &__content {
-			transform: rotateY(360deg);
-			transition: transform 750ms ease-in-out;
-		}
 	}
 </style>
