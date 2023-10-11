@@ -7,6 +7,9 @@
 
 <div class="navbar">
 	<nav>
+		<input class="navbar__burger" type="checkbox" name="burger" id="burger" />
+		<label class="navbar__burger--label" for="burger">☰</label>
+
 		<ul role="list" class="navbar__menu">
 			{#each pages as page, index (index)}
 				<li>
@@ -52,9 +55,29 @@
 	.navbar {
 		position: absolute;
 		width: 100%;
+		padding: 0 var(--content-padding);
 
-		@include mq(small) {
-			padding: 0 var(--content-padding);
+		&__burger,
+		&__burger--label {
+			font-size: 2rem;
+			padding-top: 1rem;
+			float: right;
+			cursor: pointer;
+
+			@include mq(medium) {
+				display: none;
+			}
+		}
+
+		&__burger {
+			display: none;
+		}
+
+		&__burger:checked ~ &__menu {
+			padding: 1rem 7rem;
+			left: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+			backdrop-filter: blur(8px);
 		}
 
 		ul {
@@ -63,19 +86,31 @@
 		}
 
 		&__menu {
-			display: flex;
-			justify-content: space-between;
-			justify-content: space-evenly;
-			align-items: center;
+			display: grid;
+			place-items: center;
+			position: fixed;
+			left: -100%;
+			height: 100svh;
+			transition: all 0.5s ease-in-out;
+			z-index: 9999;
 
-			@include mq(small) {
+			@include mq(medium) {
+				display: flex !important;
 				justify-content: space-between;
+				align-items: center;
+				height: auto;
+				padding: 0;
+				position: initial;
 			}
 
 			&--link {
 				&__img {
 					width: 8rem;
 					height: 100%;
+
+					@include mq(medium) {
+						display: block;
+					}
 
 					&:focus {
 						outline: 1rem solid black;
