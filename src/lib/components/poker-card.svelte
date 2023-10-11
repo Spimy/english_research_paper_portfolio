@@ -18,10 +18,10 @@
 				class:red={cardSetting.suit === '♥' || cardSetting.suit === '♦'}
 			>
 				<div class="card__content--front__suit--top">
-					{cardSetting.display}<span>{cardSetting.suit}</span>
+					{cardSetting.display}<span>{cardSetting.suit}&#xFE0E;</span>
 				</div>
 				<div class="card__content--front__suit--bottom">
-					{cardSetting.display}<span>{cardSetting.suit}</span>
+					{cardSetting.display}<span>{cardSetting.suit}&#xFE0E;</span>
 				</div>
 				<slot />
 			</div>
