@@ -156,6 +156,7 @@
 					width: max-content;
 					display: none;
 					border-radius: 0.2rem;
+					left: -50%;
 
 					&:hover,
 					&:focus {
