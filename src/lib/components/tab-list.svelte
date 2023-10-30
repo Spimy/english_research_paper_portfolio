@@ -51,16 +51,20 @@
 			padding: 0;
 
 			li {
-				background-color: var(--clr-cta-100);
-				padding: 1rem 2rem;
-				position: relative;
+				padding: 1rem 0;
 
-				[aria-current='page']::after {
-					@include south-facing-triangle(var(--clr-cta-100));
-					position: absolute;
-					top: 100%;
-					left: 50%;
-					transform: translateX(-50%);
+				a {
+					background-color: var(--clr-cta-100);
+					padding: 1rem 2rem;
+					position: relative;
+
+					&[aria-current='page']::after {
+						@include south-facing-triangle(var(--clr-cta-100));
+						position: absolute;
+						top: 100%;
+						left: 50%;
+						transform: translateX(-50%);
+					}
 				}
 			}
 		}
