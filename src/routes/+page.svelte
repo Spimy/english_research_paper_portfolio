@@ -92,6 +92,7 @@
 		background-attachment: fixed;
 		background-color: hsla(0, 0%, 0%, 0.2);
 		background-blend-mode: multiply;
+		background-position: center;
 		height: 100svh;
 		display: grid;
 		align-items: center;
