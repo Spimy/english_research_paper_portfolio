@@ -15,8 +15,8 @@
 	.footer {
 		background: linear-gradient(
 			to bottom,
-			var(--clr-background-100) 10%,
-			var(--clr-background-200) 80%
+			var(--clr-background-200) 10%,
+			var(--clr-neutral-200) 80%
 		);
 		text-align: center;
 		padding: 2rem var(--content-padding);
