@@ -17,11 +17,11 @@ export const writtenResponses: Tab[] = [
 		download: {
 			url: '/written-responses/G1_William_23020043_Written-Response_vFinal.pdf',
 			filename: 'G1_William_23020043_Written-Response_vFinal.pdf'
-		},
-		grade: {
-			received: 40,
-			maximum: 40
 		}
+		// grade: {
+		// 	received: 32,
+		// 	maximum: 40
+		// }
 	},
 	{
 		query: 'joshua',
@@ -40,11 +40,11 @@ export const writtenResponses: Tab[] = [
 		download: {
 			url: '/written-responses/G1_Joshua_23020050_Written-Response_vFinal.pdf',
 			filename: 'G1_Joshua_23020050_Written-Response_vFinal.pdf'
-		},
-		grade: {
-			received: 40,
-			maximum: 40
 		}
+		// grade: {
+		// 	received: 34,
+		// 	maximum: 40
+		// }
 	},
 	{
 		query: 'shaan',
@@ -63,10 +63,10 @@ export const writtenResponses: Tab[] = [
 		download: {
 			url: '/written-responses/G1_Shaan_23030935_Written-Response_vFinal.pdf',
 			filename: 'G1_Shaan_23030935_Written-Response_vFinal.pdf'
-		},
-		grade: {
-			received: 40,
-			maximum: 40
 		}
+		// grade: {
+		// 	received: 29,
+		// 	maximum: 40
+		// }
 	}
 ];

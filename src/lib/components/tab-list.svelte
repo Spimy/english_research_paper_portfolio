@@ -28,7 +28,12 @@
 		<header class="tablist__content__header">
 			<h2 class="tablist__content__header__title">{response.title}</h2>
 			<h3 class="tablist__content__header__authors">By {authors}</h3>
-			<a href={response.download.url} download={response.download.filename}>Download PDF</a>
+			<p>
+				<a href={response.download.url} download={response.download.filename}>Download PDF</a>
+				{#if response.grade}
+					<span class="pill">{response.grade.received} / {response.grade.maximum}</span>
+				{/if}
+			</p>
 		</header>
 		<p class="tablist__content__body">{response.content}</p>
 	</div>
@@ -88,8 +93,14 @@
 					font-style: italic;
 				}
 
-				a {
-					color: var(--clr-accent-100);
+				p {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					a {
+						color: var(--clr-accent-100);
+					}
 				}
 			}
 
