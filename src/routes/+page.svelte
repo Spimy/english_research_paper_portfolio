@@ -7,9 +7,13 @@
 	<div class="content">
 		<h1>International Governments Should Sanction Online Gambling amongst the Youth.</h1>
 		<p>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt itaque, molestias voluptatem
-			obcaecati temporibus dignissimos praesentium repellendus corporis sit aliquid laborum magnam
-			incidunt laudantium est nulla eaque molestiae doloribus? Quibusdam!
+			ENG 1044 - English for Computer Technology Studies
+			<br />
+			<br />
+			— by William Law Hong Waye, Joshua Edwin Rene Bonham, Mohammad Shaan Ibne Javed Soyfoo
+			<br />
+			<br />
+			August - December 2023
 		</p>
 		<a href="#about" class="btn">About</a>
 	</div>
