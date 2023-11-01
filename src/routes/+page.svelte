@@ -93,7 +93,6 @@
 	}
 
 	.about {
-		background-color: var(--clr-background-200);
 		padding: 1rem var(--content-padding);
 
 		> * + * {
