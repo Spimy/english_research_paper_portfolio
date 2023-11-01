@@ -55,7 +55,7 @@
 
 				a {
 					background-color: var(--clr-cta-100);
-					padding: 1rem 2rem;
+					padding: 1rem 1.5rem;
 					position: relative;
 
 					&[aria-current='page']::after {
