@@ -9,7 +9,7 @@ export const authors: Author[] = [
 		studentId: '23020050',
 		course: 'Bachelor of Software Engineering (Hons)',
 		social: [{ icon: faInstagram, url: 'https://www.instagram.com/jb_bru' }],
-		title: 'Professional Gambler',
+		title: 'Gambling Therapist',
 		profileImage: 'https://placehold.co/400'
 	},
 	{
@@ -31,7 +31,7 @@ export const authors: Author[] = [
 		studentId: '23030935',
 		course: 'BSC (Hons) in Computer Science',
 		social: [{ icon: faInstagram, url: 'https://www.instagram.com/_shaan_s' }],
-		title: 'Professional Gambler',
+		title: 'Gambler Psychologist',
 		profileImage: 'https://placehold.co/400'
 	}
 ];
