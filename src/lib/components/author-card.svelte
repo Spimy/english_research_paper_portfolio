@@ -23,7 +23,7 @@
 	<footer class="card__footer">
 		<ul role="list" class="card__footer__socials">
 			{#each info.social as social, index (index)}
-				<li><a href={social.url}><Fa icon={social.icon} /></a></li>
+				<li><a href={social.url} target="_blank"><Fa icon={social.icon} /></a></li>
 			{/each}
 		</ul>
 	</footer>
