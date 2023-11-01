@@ -1,22 +1,8 @@
 <script lang="ts">
-	import type { IconDefinition } from '@fortawesome/fontawesome-common-types';
+	import type { Author } from '$lib/types/author';
 	import Fa from 'svelte-fa';
 
-	interface Social {
-		icon: IconDefinition;
-		url: string;
-	}
-
-	interface UserInfo {
-		firstName: string;
-		lastName: string;
-		course: string;
-		title: string;
-		profileImage: string;
-		social: Social[];
-	}
-
-	export let info: UserInfo;
+	export let info: Author;
 </script>
 
 <div class="card">

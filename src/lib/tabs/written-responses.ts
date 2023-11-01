@@ -1,15 +1,10 @@
+import { authors } from '$lib/authors';
 import type { Tab } from '$lib/types/tab';
 
 export const writtenResponses: Tab[] = [
 	{
 		query: 'william',
-		authors: [
-			{
-				firstName: 'William',
-				lastName: 'Law Hong Waye',
-				studentId: '23020043'
-			}
-		],
+		authors: authors.filter((author) => author.firstName === 'William'),
 		title: 'A written response on mental health and underaged gambling',
 		content:
 			'Concerns regarding the influence of online gambling affecting the mental health of its users, especially ones on the younger side, has been on the rise. Legal measures must be taken as online gambling can affect mental health from a young age. This is highlighted by Livazović and Bojčić (2019) which indicated that 5.8% of adolescents have admitted to online betting, revealing that there is indeed a significant prevalence of gambling behaviour among this demographic. This enables addiction to develop at an early age, especially since online gambling is easily accessible. The most common way for a teenager, or even a child, to be exposed to online gambling is through video games with a gacha or loot box system. A study by Lakić et al. (2023) investigated the addictive nature of gacha games and their players’ spending behaviours where they concluded they are a form of online gambling due to shared, similar, mechanics. From this conclusion, we could also infer that this applies to games with a loot box system. Addiction developed from these types of games can lead to increased anxiety and stress level, and eventually depression. Moreover, a cognitive bias called the sunk cost fallacy, a bias that tampers with decision-making, gets developed. It is a persistence that keeps individuals wanting to invest resources, be it time or money, even when confronted with unfavourable odds or prior losses. Tait et al. (2019) has also highlighted that younger adults are being primarily affected, especially when money is involved. They reached this conclusion by sorting age groups and their investment types. Based on these readings, I believe that more efforts are required to address these concerns and develop responsible gambling practices as beyond psychological consequences, they also raise ethical and legal questions. The exploitability of these behaviours, particularly among younger individuals, demands for stricter legal frameworks that are to be obeyed so as the vulnerable young ones are protected.',
@@ -25,13 +20,7 @@ export const writtenResponses: Tab[] = [
 	},
 	{
 		query: 'joshua',
-		authors: [
-			{
-				firstName: 'Joshua',
-				lastName: 'Edwin Rene Bonham',
-				studentId: '23020050'
-			}
-		],
+		authors: authors.filter((author) => author.firstName === 'Joshua'),
 		title:
 			'Assessing the unregulated deceptive marketing of online gambling and its effects on youth: A brief response on significant articles regarding its drawbacks',
 		content:
@@ -48,13 +37,7 @@ export const writtenResponses: Tab[] = [
 	},
 	{
 		query: 'shaan',
-		authors: [
-			{
-				firstName: 'Shaan',
-				lastName: 'Mohammad Ibne Javed Soyfoo',
-				studentId: '23030935'
-			}
-		],
+		authors: authors.filter((author) => author.firstName === 'Shaan'),
 		title:
 			'A brief written response on negative financial consequences of online gambling amongst the youth',
 		content:

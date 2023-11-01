@@ -1,10 +1,8 @@
 <script lang="ts">
+	import { authors } from '$lib/authors';
 	import AuthorCard from '$lib/components/author-card.svelte';
 	import PokerCard from '$lib/components/poker-card.svelte';
 	import { pages } from '$lib/page';
-	import { faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
-	// @ts-ignore
-	import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 </script>
 
 <section class="hero">
@@ -14,7 +12,7 @@
 			ENG 1044 - English for Computer Technology Studies
 			<br />
 			<br />
-			— by William Law Hong Waye, Joshua Edwin Rene Bonham, Mohammad Shaan Ibne Javed Soyfoo
+			— by {authors.map((author) => `${author.firstName} ${author.lastName}`).join(', ')}
 			<br />
 			<br />
 			August - December 2023
@@ -74,40 +72,9 @@
 	<h1>About Us</h1>
 
 	<div class="authors__card">
-		<AuthorCard
-			info={{
-				firstName: 'Joshua',
-				lastName: 'Edwin Rene Bonham',
-				course: 'Bachelor of Software Engineering (Hons)',
-				social: [{ icon: faInstagram, url: 'https://www.instagram.com/jb_bru' }],
-				title: 'Professional Gambler',
-				profileImage: 'https://placehold.co/400'
-			}}
-		/>
-		<AuthorCard
-			info={{
-				firstName: 'William',
-				lastName: 'Law Hong Waye',
-				course: 'Bachelor of Software Engineering (Hons)',
-				social: [
-					{ icon: faGlobe, url: 'https://www.spimy.dev' },
-					{ icon: faInstagram, url: 'https://www.instagram.com/william3001_lhw' },
-					{ icon: faGithub, url: 'https://www.github.com/spimy' }
-				],
-				title: 'Professional Gambler',
-				profileImage: 'https://placehold.co/400'
-			}}
-		/>
-		<AuthorCard
-			info={{
-				firstName: 'Shaan',
-				lastName: 'Mohammad Ibne Javed Soyfoo',
-				course: 'BSC (Hons) in Computer Science',
-				social: [{ icon: faInstagram, url: 'https://www.instagram.com/_shaan_s' }],
-				title: 'Professional Gambler',
-				profileImage: 'https://placehold.co/400'
-			}}
-		/>
+		{#each authors as author}
+			<AuthorCard info={author} />
+		{/each}
 	</div>
 </section>
 
