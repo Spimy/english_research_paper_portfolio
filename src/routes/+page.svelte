@@ -163,9 +163,12 @@
 		padding: 1rem var(--content-padding);
 
 		&__card {
-			display: flex;
-			justify-content: space-between;
 			margin-top: 2em;
+
+			@include mq(medium) {
+				display: flex;
+				justify-content: space-between;
+			}
 		}
 	}
 </style>
