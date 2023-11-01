@@ -1,8 +1,4 @@
-export interface Author {
-	firstName: string;
-	lastName: string;
-	studentId: string;
-}
+import type { Author } from './author';
 
 export interface Tab {
 	query: string;
