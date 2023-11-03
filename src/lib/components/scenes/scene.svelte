@@ -8,7 +8,7 @@
 	const { scene } = useThrelte();
 	scene.background = new Color('hsl(154, 89%, 4%)');
 
-	let current = -1;
+	let current = 0.5;
 	let camera = {
 		position: [-2.789, current, -0.5] as [x: number, y: number, z: number],
 		rotation: [-103.6, 0, -103.62] as [x: number, y: number, z: number]
