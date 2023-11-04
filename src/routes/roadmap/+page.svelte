@@ -27,8 +27,8 @@
 			<div
 				class="roadmap__banner"
 				class:show={banner}
-				in:fly={{ x: -200, duration: 300, delay: 300 }}
-				out:fly={{ x: 200, duration: 300 }}
+				in:fly={{ x: -200, duration: 400, delay: 400 }}
+				out:fly={{ x: 200, duration: 400 }}
 				on:animationstart={() => (banner = true)}
 			>
 				<div class="roadmap__banner__chips">
