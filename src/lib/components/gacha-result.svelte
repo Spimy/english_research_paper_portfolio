@@ -1,7 +1,10 @@
 <script lang="ts">
 	import type { GachaResult } from '$lib/types/gacha-result';
+	import { createEventDispatcher } from 'svelte';
 	import { quintOut } from 'svelte/easing';
 	import { fly, scale } from 'svelte/transition';
+	import Chips from './chips.svelte';
+	import GachaBtn from './gacha-btn.svelte';
 
 	export let gachaResult: GachaResult[];
 	let index = 0;
@@ -11,6 +14,8 @@
 		if (index < gachaResult.length - 1) index += 1;
 		else summary = true;
 	}
+
+	const event = createEventDispatcher<{ reroll: void; return: void }>();
 </script>
 
 {#if gachaResult.length > 0}
@@ -29,25 +34,35 @@
 				{/key}
 			</div>
 		{:else}
-			<div class="result__summary" in:fly={{ duration: 500, x: -300, easing: quintOut }}>
-				{#each gachaResult as result, i (i)}
-					{#key i}
-						<img
-							src={result.url}
-							alt="gacha result {i + 1}"
-							class:r={result.rarity === 'R'}
-							class:sr={result.rarity === 'SR'}
-							class:ssr={result.rarity === 'SSR'}
-							in:scale|global={{
-								duration: 500,
-								opacity: 0,
-								start: 1.5,
-								delay: i * 100,
-								easing: quintOut
-							}}
-						/>
-					{/key}
-				{/each}
+			<div class="result__summary">
+				<div class="result__summary__chips"><Chips /></div>
+				<div
+					class="result__summary__container"
+					in:fly={{ duration: 500, x: -300, easing: quintOut }}
+				>
+					{#each gachaResult as result, i (i)}
+						{#key i}
+							<img
+								src={result.url}
+								alt="gacha result {i + 1}"
+								class:r={result.rarity === 'R'}
+								class:sr={result.rarity === 'SR'}
+								class:ssr={result.rarity === 'SSR'}
+								in:scale|global={{
+									duration: 500,
+									opacity: 0,
+									start: 1.5,
+									delay: i * 100,
+									easing: quintOut
+								}}
+							/>
+						{/key}
+					{/each}
+				</div>
+				<div class="result__summary__buttons">
+					<GachaBtn on:click={() => event('return')} customText="Return" />
+					<GachaBtn on:click={() => event('reroll')} />
+				</div>
 			</div>
 		{/if}
 	</div>
@@ -57,7 +72,7 @@
 	@use '../../scss/abstracts/mixins' as *;
 
 	.result {
-		padding: 8rem var(--content-padding) 3rem;
+		padding: 5rem var(--content-padding) 2.7rem;
 
 		--_glow: red;
 
@@ -85,20 +100,40 @@
 
 		&__summary {
 			display: grid;
-			gap: 2rem;
+			gap: 1.5rem;
 
-			@include mq(small) {
-				grid-template-columns: repeat(2, 1fr);
+			&__chips {
+				justify-self: end;
 			}
 
-			@include mq(medium) {
-				grid-template-columns: repeat(5, 1fr);
+			&__container {
+				display: grid;
+				place-items: center;
+				grid-template-columns: 1fr;
+				gap: 2rem;
+
+				@include mq(small) {
+					grid-template-columns: repeat(2, 1fr);
+				}
+
+				@include mq(medium) {
+					grid-template-columns: repeat(5, 1fr);
+				}
+
+				img {
+					cursor: initial;
+				}
 			}
 
-			img {
-				height: auto;
-				width: 13rem;
-				cursor: initial;
+			&__buttons {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1rem;
+
+				@include mq(small) {
+					justify-content: space-between;
+					align-items: end;
+				}
 			}
 		}
 
