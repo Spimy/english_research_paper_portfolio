@@ -25,7 +25,6 @@
 		// Bounce animation by moving the chest's y-position every 200ms
 		setTimeout(() => {
 			position.set([0, 5, 0]);
-			console.log('test');
 		}, 200);
 		setTimeout(() => {
 			position.set([0, -1, 0]);
