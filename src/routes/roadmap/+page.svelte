@@ -3,59 +3,64 @@
 	import Scene from '$lib/components/scenes/scene.svelte';
 	import { Canvas } from '@threlte/core';
 	import { onMount } from 'svelte';
-	import { fly } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 
 	let showGacha = false;
-	let banner = false;
-	let audio: HTMLAudioElement;
+	let showResult = false;
+	let showBanner = false;
 	let closedModal = true;
+	let audio: HTMLAudioElement;
 
 	onMount(() => {
 		audio.play();
-		banner = true;
+		showBanner = true;
 	});
 </script>
 
-<section class="roadmap" class:point={showGacha}>
-	<audio src="/sfx/WishMenu.mp3" bind:this={audio} />
-	{#if showGacha}
-		<Canvas>
-			<Scene />
-		</Canvas>
-	{:else}
-		{#key audio}
-			<div
-				class="roadmap__banner"
-				class:show={banner}
-				in:fly={{ x: -200, duration: 400, delay: 400 }}
-				out:fly={{ x: 200, duration: 400 }}
-				on:animationstart={() => (banner = true)}
-			>
-				<div class="roadmap__banner__chips">
-					<img src="/roadmap/chip.png" alt="chip" class="chip" />
-					0
+{#if !showResult}
+	<section class="roadmap" class:point={showGacha} out:fade={{ duration: 300, delay: 600 }}>
+		<audio src="/sfx/WishMenu.mp3" bind:this={audio} />
+		{#if showGacha}
+			<Canvas>
+				<Scene on:animationEnd={() => ((showResult = true), (showGacha = false))} />
+			</Canvas>
+		{:else}
+			{#key audio}
+				<div
+					class="roadmap__banner"
+					class:show={showBanner}
+					in:fly={{ x: -200, duration: 400, delay: 400 }}
+					out:fly={{ x: 200, duration: 400 }}
+					on:animationstart={() => (showBanner = true)}
+				>
+					<div class="roadmap__banner__chips">
+						<img src="/roadmap/chip.png" alt="chip" class="chip" />
+						0
+					</div>
+					<img src="/roadmap/Banner.png" alt="roadmap banner" />
+					<div class="roadmap__banner__buttons">
+						<button on:click={() => (closedModal = false)}>Details</button>
+						<button on:click={() => (showGacha = true)}>
+							Gacha 10x
+							<span>
+								<img src="/roadmap/chip.png" alt="chip" class="chip" />
+								x 0 <strike>1600</strike>
+							</span>
+						</button>
+					</div>
 				</div>
-				<img src="/roadmap/Banner.png" alt="roadmap banner" />
-				<div class="roadmap__banner__buttons">
-					<button on:click={() => (closedModal = false)}>Details</button>
-					<button on:click={() => (showGacha = true)}>
-						Gacha 10x
-						<span>
-							<img src="/roadmap/chip.png" alt="chip" class="chip" />
-							x 0 <strike>1600</strike>
-						</span>
-					</button>
-				</div>
-			</div>
 
-			<Modal closed={closedModal} on:closed={() => (closedModal = true)}>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quas, a temporibus quod
-				quaerat sequi? Quis consequatur, mollitia non magni quaerat impedit veritatis facilis
-				explicabo doloremque, minus ipsa eius adipisci.
-			</Modal>
-		{/key}
-	{/if}
-</section>
+				<Modal closed={closedModal} on:closed={() => (closedModal = true)}>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quas, a temporibus quod
+					quaerat sequi? Quis consequatur, mollitia non magni quaerat impedit veritatis facilis
+					explicabo doloremque, minus ipsa eius adipisci.
+				</Modal>
+			{/key}
+		{/if}
+	</section>
+{:else}
+	<section class="gacha-result" in:fade={{ duration: 300, delay: 750 }} />
+{/if}
 
 <style lang="scss">
 	@use '../../scss/abstracts/mixins' as *;
@@ -136,5 +141,10 @@
 				}
 			}
 		}
+	}
+
+	.gacha-result {
+		height: 100svh;
+		background: linear-gradient(var(--clr-background-100), var(--clr-background-200));
 	}
 </style>
