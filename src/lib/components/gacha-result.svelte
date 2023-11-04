@@ -73,6 +73,9 @@
 
 	.result {
 		padding: 5rem var(--content-padding) 2.7rem;
+		min-height: 100svh;
+		display: grid;
+		place-items: center;
 
 		--_glow: red;
 
