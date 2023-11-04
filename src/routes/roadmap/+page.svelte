@@ -1,9 +1,12 @@
 <script lang="ts">
+	import GachaResult from '$lib/components/gacha-result.svelte';
 	import Modal from '$lib/components/modal.svelte';
 	import Scene from '$lib/components/scenes/scene.svelte';
 	import { Canvas } from '@threlte/core';
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
+
+	export let data;
 
 	let showGacha = false;
 	let showResult = false;
@@ -59,7 +62,9 @@
 		{/if}
 	</section>
 {:else}
-	<section class="gacha-result" in:fade={{ duration: 300, delay: 750 }} />
+	<section class="gacha-result" in:fade={{ duration: 300, delay: 750 }}>
+		<GachaResult gachaResult={data.gachaResult} />
+	</section>
 {/if}
 
 <style lang="scss">
@@ -144,7 +149,8 @@
 	}
 
 	.gacha-result {
-		height: 100svh;
 		background: linear-gradient(var(--clr-background-100), var(--clr-background-200));
+		display: grid;
+		place-items: center;
 	}
 </style>
