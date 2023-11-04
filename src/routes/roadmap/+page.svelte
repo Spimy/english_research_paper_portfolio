@@ -58,6 +58,8 @@
 </section>
 
 <style lang="scss">
+	@use '../../scss/abstracts/mixins' as *;
+
 	.roadmap {
 		padding: 1rem var(--content-padding);
 		height: 100svh;
@@ -98,8 +100,13 @@
 
 			&__buttons {
 				display: flex;
-				justify-content: space-between;
-				align-items: end;
+				flex-wrap: wrap;
+				gap: 1rem;
+
+				@include mq(small) {
+					justify-content: space-between;
+					align-items: end;
+				}
 
 				button {
 					border: 0;
@@ -109,7 +116,12 @@
 					background-color: var(--clr-cta-100);
 					font-family: 'Poppins', sans-serif;
 					font-weight: bold;
+					flex-grow: 1;
 					cursor: pointer;
+
+					@include mq(small) {
+						flex-grow: 0;
+					}
 
 					span {
 						display: block;
