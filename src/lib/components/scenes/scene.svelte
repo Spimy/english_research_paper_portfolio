@@ -20,23 +20,25 @@
 
 	onMount(async () => {
 		setTimeout(() => {
-			position.set([0, 5, 0]);
-		}, 200);
-		setTimeout(() => {
-			position.set([0, -1, 0]);
-		}, 400);
-		setTimeout(() => {
-			position.set([0, 1, 0]);
-		}, 600);
-		setTimeout(() => {
-			position.set([0, -0.2, 0]);
-		}, 800);
-		setTimeout(() => {
-			position.set([0, 0.2, 0]);
-		}, 1000);
-		setTimeout(() => {
-			position.set([0, 0, 0]);
-		}, 1200);
+			setTimeout(() => {
+				position.set([0, 5, 0]);
+			}, 200);
+			setTimeout(() => {
+				position.set([0, -1, 0]);
+			}, 400);
+			setTimeout(() => {
+				position.set([0, 1, 0]);
+			}, 600);
+			setTimeout(() => {
+				position.set([0, -0.2, 0]);
+			}, 800);
+			setTimeout(() => {
+				position.set([0, 0.2, 0]);
+			}, 1000);
+			setTimeout(() => {
+				position.set([0, 0, 0]);
+			}, 1200);
+		}, 500);
 	});
 </script>
 
@@ -54,5 +56,5 @@
 	position={$position}
 	rotation={$rotation}
 	animations={[]}
-	on:click={() => $actions['Chest|Chest|ArmatureAction']?.setLoop(LoopPingPong, 2).play()}
+	on:click={() => $actions['Chest|Chest|ArmatureAction']?.reset().setLoop(LoopPingPong, 2).play()}
 />
