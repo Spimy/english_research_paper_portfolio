@@ -70,9 +70,8 @@
 	@use '../../scss/abstracts/mixins' as *;
 
 	.roadmap {
-		padding: 1rem var(--content-padding);
-		height: 100svh;
-		display: grid;
+		padding: 5rem var(--content-padding) 1rem;
+		// display: grid;
 		place-items: center;
 		gap: 5rem;
 
@@ -95,6 +94,12 @@
 
 			&__chips {
 				justify-self: end;
+			}
+
+			img {
+				justify-self: center;
+				height: auto;
+				width: 85%;
 			}
 
 			&__buttons {
