@@ -22,27 +22,26 @@
 	const orbitTarget = [50, 0, 0.486] as [x: number, y: number, z: number];
 
 	onMount(async () => {
+		// Bounce animation by moving the chest's y-position every 200ms
 		setTimeout(() => {
-			// Bounce animation by moving the chest's y-position every 200ms
-			setTimeout(() => {
-				position.set([0, 5, 0]);
-			}, 200);
-			setTimeout(() => {
-				position.set([0, -1, 0]);
-			}, 400);
-			setTimeout(() => {
-				position.set([0, 1, 0]);
-			}, 600);
-			setTimeout(() => {
-				position.set([0, -0.2, 0]);
-			}, 800);
-			setTimeout(() => {
-				position.set([0, 0.2, 0]);
-			}, 1000);
-			setTimeout(() => {
-				position.set([0, 0, 0]);
-			}, 1200);
-		}, 500);
+			position.set([0, 5, 0]);
+			console.log('test');
+		}, 200);
+		setTimeout(() => {
+			position.set([0, -1, 0]);
+		}, 400);
+		setTimeout(() => {
+			position.set([0, 1, 0]);
+		}, 600);
+		setTimeout(() => {
+			position.set([0, -0.2, 0]);
+		}, 800);
+		setTimeout(() => {
+			position.set([0, 0.2, 0]);
+		}, 1000);
+		setTimeout(() => {
+			position.set([0, 0, 0]);
+		}, 1200);
 	});
 
 	const event = createEventDispatcher<{ animationEnd: void }>();
