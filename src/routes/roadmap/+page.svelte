@@ -71,8 +71,8 @@
 
 	.roadmap {
 		padding: 5rem var(--content-padding) 1rem;
-		// display: grid;
-		place-items: center;
+		display: grid;
+		height: 100svh;
 		gap: 5rem;
 
 		&.point {
@@ -93,11 +93,11 @@
 			}
 
 			&__chips {
-				justify-self: end;
+				place-self: end;
 			}
 
 			img {
-				justify-self: center;
+				place-self: center;
 				height: auto;
 				width: 85%;
 			}
@@ -106,6 +106,7 @@
 				display: flex;
 				flex-wrap: wrap;
 				gap: 1rem;
+				height: fit-content;
 
 				@include mq(small) {
 					justify-content: space-between;
