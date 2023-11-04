@@ -1,6 +1,15 @@
 <script lang="ts">
-	export let bgText: string;
-	let closed = false;
+	import { createEventDispatcher } from 'svelte';
+
+	export let bgText: string | undefined = undefined;
+	export let closed = false;
+
+	const event = createEventDispatcher<{ closed: void }>();
+
+	function closeModal() {
+		event('closed');
+		closed = true;
+	}
 </script>
 
 {#if typeof bgText !== 'undefined' || !closed}
@@ -12,9 +21,7 @@
 			</div>
 		{:else}
 			<div class="modal-container__modal">
-				<button class="modal-container__modal__close-btn" on:click={() => (closed = true)}>
-					X
-				</button>
+				<button class="modal-container__modal__close-btn" on:click={closeModal}> X </button>
 				<div class="modal-container__modal__content"><slot /></div>
 			</div>
 		{/if}
@@ -29,9 +36,10 @@
 		background-color: red;
 		display: grid;
 		place-items: center;
+		padding: 1rem var(--content-padding);
 
 		&__modal {
-			background-color: yellow;
+			background-color: blue;
 			padding: 1rem;
 			border-radius: 0.5rem;
 			display: grid;
