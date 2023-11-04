@@ -72,7 +72,7 @@
 	.roadmap {
 		padding: 5rem var(--content-padding) 1rem;
 		display: grid;
-		height: 100svh;
+		min-height: 100svh;
 		gap: 5rem;
 
 		&.point {
