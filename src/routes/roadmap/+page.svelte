@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Chips from '$lib/components/chips.svelte';
+	import GachaBtn from '$lib/components/gacha-btn.svelte';
 	import GachaResult from '$lib/components/gacha-result.svelte';
 	import Modal from '$lib/components/modal.svelte';
 	import Scene from '$lib/components/scenes/scene.svelte';
@@ -37,19 +39,12 @@
 					on:animationstart={() => (showBanner = true)}
 				>
 					<div class="roadmap__banner__chips">
-						<img src="/roadmap/chip.png" alt="chip" class="chip" />
-						0
+						<Chips />
 					</div>
 					<img src="/roadmap/Banner.png" alt="roadmap banner" />
 					<div class="roadmap__banner__buttons">
-						<button on:click={() => (closedModal = false)}>Details</button>
-						<button on:click={() => (showGacha = true)}>
-							Gacha 10x
-							<span>
-								<img src="/roadmap/chip.png" alt="chip" class="chip" />
-								x 0 <strike>1600</strike>
-							</span>
-						</button>
+						<GachaBtn on:click={() => (closedModal = false)} customText="Details" />
+						<GachaBtn on:click={() => (showGacha = true)} />
 					</div>
 				</div>
 
@@ -63,7 +58,11 @@
 	</section>
 {:else}
 	<section class="gacha-result" in:fade={{ duration: 300, delay: 750 }}>
-		<GachaResult gachaResult={data.gachaResult} />
+		<GachaResult
+			on:reroll={() => ((showResult = false), (showGacha = true))}
+			on:return={() => ((showResult = false), (showBanner = true))}
+			gachaResult={data.gachaResult}
+		/>
 	</section>
 {/if}
 
@@ -94,17 +93,7 @@
 				opacity: 1;
 			}
 
-			.chip {
-				aspect-ratio: 1;
-				width: 1rem;
-				display: inline-block;
-			}
-
 			&__chips {
-				background-color: var(--clr-accent-100);
-				padding: 0.2rem 0.5rem;
-				border-radius: 1rem;
-				width: 5rem;
 				justify-self: end;
 			}
 
@@ -116,33 +105,6 @@
 				@include mq(small) {
 					justify-content: space-between;
 					align-items: end;
-				}
-
-				button {
-					border: 0;
-					border-radius: 0.5rem;
-					padding: 0.5rem 4rem;
-					color: var(--clr-text-100);
-					background-color: var(--clr-cta-100);
-					font-family: 'Poppins', sans-serif;
-					font-weight: bold;
-					flex-grow: 1;
-					cursor: pointer;
-
-					@include mq(small) {
-						flex-grow: 0;
-					}
-
-					span {
-						display: block;
-						color: var(--clr-accent-100);
-						font-weight: normal;
-					}
-
-					&:hover,
-					&:focus {
-						background-color: rgba(255, 0, 0, 0.5);
-					}
 				}
 			}
 		}
