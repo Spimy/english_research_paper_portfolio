@@ -133,7 +133,6 @@
 
 					a {
 						color: var(--clr-accent-100);
-						// text-decoration: underline;
 					}
 
 					&:not(:first-of-type) {
