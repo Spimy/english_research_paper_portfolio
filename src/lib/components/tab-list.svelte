@@ -36,6 +36,16 @@
 			</p>
 		</header>
 		<p class="tablist__content__body">{response.content}</p>
+		<footer class="tablist__content__footer">
+			<h2 class="tablist__content__footer__title">References</h2>
+			{#each response.references as reference}
+				<p>
+					{reference.author}
+					{reference.title} <i>{reference.publisher}</i>{reference.issuePage}
+					<a href={reference.url}>{reference.url}</a>
+				</p>
+			{/each}
+		</footer>
 	</div>
 </div>
 
@@ -108,6 +118,28 @@
 				line-height: 2em;
 				text-align: justify;
 				font-size: 1.25rem;
+			}
+
+			&__footer {
+				line-height: 2em;
+
+				&__title {
+					text-transform: uppercase;
+				}
+
+				p {
+					text-indent: -3em;
+					padding-left: 3em;
+
+					a {
+						color: var(--clr-accent-100);
+						// text-decoration: underline;
+					}
+
+					&:not(:first-of-type) {
+						padding-block-start: 1em;
+					}
+				}
 			}
 		}
 	}
