@@ -11,6 +11,8 @@
 		<label class="navbar__burger--label" for="burger">☰</label>
 
 		<ul role="list" class="navbar__menu">
+			<label class="navbar__menu--label" for="burger">X</label>
+
 			{#each pages as page, index (index)}
 				<li>
 					{#if page.url}
@@ -76,6 +78,7 @@
 		&__burger:checked ~ &__menu {
 			padding: 1rem 7rem;
 			left: 0;
+			right: 0;
 			background-color: rgba(0, 0, 0, 0.5);
 			backdrop-filter: blur(8px);
 
@@ -83,6 +86,14 @@
 				background-color: transparent;
 				backdrop-filter: unset;
 				padding: 1rem 0;
+			}
+
+			> .navbar__menu--label {
+				right: 1rem;
+
+				@include mq(medium) {
+					right: 100%;
+				}
 			}
 		}
 
@@ -107,6 +118,22 @@
 				height: auto;
 				padding: 0;
 				position: initial;
+			}
+
+			&--label {
+				font-size: var(--fs-400);
+				position: absolute;
+				right: 100%;
+				top: 1rem;
+				background-color: var(--clr-accent-100);
+				padding: 0.25rem 0.75rem;
+				border-radius: 0.25rem;
+				transition: all 0.5s ease-in-out;
+				cursor: pointer;
+
+				&:hover {
+					background-color: var(--clr-background-100);
+				}
 			}
 
 			&--link {
