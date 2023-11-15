@@ -56,16 +56,16 @@
 			</div>
 			<div class="outline__body__intro__specific">
 				<h3>Specific Information</h3>
-				<ol>
+				<ul>
 					<li>Lose/win money at the comfort of one’s home – higher stakes, higher interest.</li>
 					<li>Discuss range of online gambling</li>
 					<li>Add market value statistics and growth rate.</li>
-				</ol>
+				</ul>
 			</div>
 			<div class="outline__body__intro__thesis">
 				<h3>Thesis Statement</h3>
 				<p>This essay contains the following arguments:</p>
-				<ol>
+				<ul>
 					<li>Online gambling brings about addiction and mental illnesses.</li>
 					<li>Lack of regulations on deceptive marketing and its effects on youth gambling.</li>
 					<li>Online gambling brings about negative financial consequences.</li>
@@ -73,7 +73,7 @@
 						Online gambling should indubitably be sanctioned by international government to regulate
 						usage among youth, improve online safety and decrease widespread fraud.
 					</li>
-				</ol>
+				</ul>
 			</div>
 		</div>
 
