@@ -22,14 +22,24 @@
 
 			<h2>Keywords:</h2>
 			<p>
-				<a href="https://dictionary.cambridge.org/dictionary/english/online">Online</a>,
-				<a href="https://dictionary.cambridge.org/dictionary/english/gambling">Gambling</a>,
-				<a href="https://dictionary.cambridge.org/dictionary/english/youth">Youth</a>,
-				<a href="https://dictionary.cambridge.org/dictionary/english/international">
+				<a href="https://dictionary.cambridge.org/dictionary/english/online" target="_blank">
+					Online
+				</a>,
+				<a href="https://dictionary.cambridge.org/dictionary/english/gambling" target="_blank">
+					Gambling
+				</a>,
+				<a href="https://dictionary.cambridge.org/dictionary/english/youth" target="_blank">
+					Youth
+				</a>,
+				<a href="https://dictionary.cambridge.org/dictionary/english/international" target="_blank">
 					International
 				</a>,
-				<a href="https://dictionary.cambridge.org/dictionary/english/government">Government</a>,
-				<a href=" https://dictionary.cambridge.org/dictionary/english/legality">Legality</a>
+				<a href="https://dictionary.cambridge.org/dictionary/english/government" target="_blank">
+					Government
+				</a>,
+				<a href=" https://dictionary.cambridge.org/dictionary/english/legality" target="_blank">
+					Legality
+				</a>
 			</p>
 		</div>
 	</header>

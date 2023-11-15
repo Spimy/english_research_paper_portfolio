@@ -4,9 +4,10 @@
 
 <footer class="footer">
 	<p>
-		This website is <a href="https://github.com/Spimy/english_research_paper_portfolio/"
-			>Open Sourced</a
-		>
+		This website is
+		<a href="https://github.com/Spimy/english_research_paper_portfolio/" target="_blank">
+			Open Sourced
+		</a>
 	</p>
 	<p>Copyright &copy {year} - All Rights Reserved</p>
 </footer>
