@@ -78,6 +78,12 @@
 			left: 0;
 			background-color: rgba(0, 0, 0, 0.5);
 			backdrop-filter: blur(8px);
+
+			@include mq(medium) {
+				background-color: transparent;
+				backdrop-filter: unset;
+				padding: 1rem 0;
+			}
 		}
 
 		ul {
