@@ -107,7 +107,7 @@
 			place-items: center;
 			position: fixed;
 			left: -100%;
-			height: 100svh;
+			height: 100vh;
 			transition: all 0.5s ease-in-out;
 			z-index: 9999;
 
