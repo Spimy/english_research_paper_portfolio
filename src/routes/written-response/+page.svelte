@@ -6,7 +6,7 @@
 </script>
 
 <section class="responses">
-	<TabList title="Written Response" writtenResponses={data.writtenResponses} />
+	<TabList title="Written Response" tabs={data.writtenResponses} />
 </section>
 
 <style lang="scss">
