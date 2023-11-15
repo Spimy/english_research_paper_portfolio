@@ -3,11 +3,11 @@
 	import type { Tab } from '$lib/types/tab';
 
 	export let title: string;
-	export let writtenResponses: Tab[];
+	export let tabs: Tab[];
 
-	$: query = $page.url.searchParams.get('author') ?? writtenResponses[0].query;
-	$: response = writtenResponses.filter((response) => response.query === query)[0];
-	$: authors = response.authors
+	$: query = $page.url.searchParams.get('author') ?? tabs[0].query;
+	$: tab = tabs.filter((response) => response.query === query)[0];
+	$: authors = tab.authors
 		.map((author) => `${author.firstName} ${author.lastName} (${author.studentId})`)
 		.join(', ');
 </script>
@@ -15,30 +15,29 @@
 <div class="tablist">
 	<h1>{title}</h1>
 	<ul role="list" class="tablist__tabs">
-		{#each writtenResponses as response, index (index)}
+		{#each tabs as tab, index (index)}
 			<li>
-				<a
-					aria-current={response.query === query ? 'page' : undefined}
-					href="?author={response.query}">{response.authors[0].firstName}</a
+				<a aria-current={tab.query === query ? 'page' : undefined} href="?author={tab.query}"
+					>{tab.authors[0].firstName}</a
 				>
 			</li>
 		{/each}
 	</ul>
 	<div class="tablist__content">
 		<header class="tablist__content__header">
-			<h2 class="tablist__content__header__title">{response.title}</h2>
+			<h2 class="tablist__content__header__title">{tab.title}</h2>
 			<h3 class="tablist__content__header__authors">By {authors}</h3>
 			<p>
-				<a href={response.download.url} download={response.download.filename}>Download PDF</a>
-				{#if response.grade}
-					<span class="pill">{response.grade.received} / {response.grade.maximum}</span>
+				<a href={tab.download.url} download={tab.download.filename}>Download PDF</a>
+				{#if tab.grade}
+					<span class="pill">{tab.grade.received} / {tab.grade.maximum}</span>
 				{/if}
 			</p>
 		</header>
-		<p class="tablist__content__body">{response.content}</p>
+		<p class="tablist__content__body">{tab.content}</p>
 		<footer class="tablist__content__footer">
 			<h2 class="tablist__content__footer__title">References</h2>
-			{#each response.references as reference}
+			{#each tab.references as reference}
 				<p>
 					{reference.author}
 					{reference.title} <i>{reference.publisher}</i>{reference.issuePage}
