@@ -255,6 +255,8 @@
 </section>
 
 <style lang="scss">
+	@use '../../scss/abstracts/mixins' as *;
+
 	.outline {
 		display: grid;
 		gap: 2rem;
@@ -277,7 +279,10 @@
 			line-height: 2em;
 			font-size: 1.25rem;
 			max-width: 80ch;
-			text-align: justify;
+
+			@include mq(small) {
+				text-align: justify;
+			}
 		}
 
 		hr {
