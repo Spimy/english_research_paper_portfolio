@@ -11,8 +11,8 @@ export const drafts: Tab[] = [
 			{
 				title: '1.0 Introduction',
 				body: [
-					'The pandemic of online gambling (OG) is destroying the lives of today’s youth at a drastically increasing rate (Montial et al., 2021). Gambling, often termed betting, is the wagering of anything with value for the chance of achieving a certain event or outcome. It has existed in almost every culture since the beginning of civilisation. For instance, at the base of His crucifixion, Jesus’ garments became a wager for Roman soldiers (Eadington, 2008). Subsequently, it has evolved considerably; however, its legality has been questioned numerous times (as seen in European history) (Gambling: History, 2023).',
-					'Additionally, with the mass advancement in IT and internet capabilities, OG has become increasingly accessible and immediate for anyone with internet worldwide. Whether betting on sporting events or predicting political elections, nowadays there is a lot of money to be lost and won from the comfort of one’s home. With an estimated market value of $63.53 billion (in 2022) and a compound annual growth rate of 11.7% (Research and Markets, n.d.), OG will only get bigger with the increase in betting websites, fake ‘get rich quick’ propaganda, and controversial international legality.',
+					"The pandemic of online gambling (OG) is destroying the lives of today's youth at a drastically increasing rate (Montial et al., 2021). Gambling, often termed betting, is the wagering of anything with value for the chance of achieving a certain event or outcome. It has existed in almost every culture since the beginning of civilisation. For instance, at the base of His crucifixion, Jesus' garments became a wager for Roman soldiers (Eadington, 2008). Subsequently, it has evolved considerably; however, its legality has been questioned numerous times (as seen in European history) (Gambling: History, 2023).",
+					"Additionally, with the mass advancement in IT and internet capabilities, OG has become increasingly accessible and immediate for anyone with internet worldwide. Whether betting on sporting events or predicting political elections, nowadays there is a lot of money to be lost and won from the comfort of one's home. With an estimated market value of $63.53 billion (in 2022) and a compound annual growth rate of 11.7% (Research and Markets, n.d.), OG will only get bigger with the increase in betting websites, fake ‘get rich quick' propaganda, and controversial international legality.",
 					'This research paper contends that governments worldwide should indubitably sanction OG to regulate usage among younger generations, improve online safety, and decrease widespread fraud. It specifically looks at the moral problem of mental health issues brought on by OG, the financial difficulties posed by widespread use, and the moderately unregulated deceptive marketing of OG and its ramifications amongst youth.'
 				]
 			},
@@ -37,7 +37,7 @@ export const drafts: Tab[] = [
 			{
 				title: '4.0 Ramifications of the moderately unregulated deceptive marketing of OG',
 				body: [
-					"The unregulated deceptive marketing of OG presents a grave concern, with multifaceted issues that extend far beyond the mere pursuit of financial gain. Firstly, the augmentation of advertising and marketing for OG deliberately taps into young consumer subjectivity. Deceptive marketing strategies capitalise on individuals' cognitive biases and intrinsic senses. Enticing colors, designs, and wordplay are used to lure potential gamblers with promises of excitement and big wins. This preys on the natural inclination of the human’s heuristic of representativeness (López-González et al., 2017). Individuals feel optimistic about their chances, drawing them into a dangerous web of gambling addiction and financial losses.",
+					"The unregulated deceptive marketing of OG presents a grave concern, with multifaceted issues that extend far beyond the mere pursuit of financial gain. Firstly, the augmentation of advertising and marketing for OG deliberately taps into young consumer subjectivity. Deceptive marketing strategies capitalise on individuals' cognitive biases and intrinsic senses. Enticing colors, designs, and wordplay are used to lure potential gamblers with promises of excitement and big wins. This preys on the natural inclination of the human's heuristic of representativeness (López-González et al., 2017). Individuals feel optimistic about their chances, drawing them into a dangerous web of gambling addiction and financial losses.",
 					'Many OG advertisements portray gambling as a safe, skill-enhancing, low-risk activity and associate betting with seemingly harmless activities, such as socializing and entertainment. According to research López-González et al. (2017) gathered, supporters of the Australian Rugby League, many of whom are families with pubescent children, were subject to 322 episodes of gambling advertisements throughout three matches (López-González et al., 2017). They argue, as a result, that minors may be susceptible to early-onset gambling addiction. Thus, younger generations are systematically desensitized to perceive OG as an investment or a hobby. However, the reality is that OG can have severe financial and psychological consequences for vulnerable individuals.',
 					'Furthermore, Bouguettaya et al. (2020) consolidate this dose-response relationship between gambling advertising and gambling attitudes. The more exposure individuals must have to gambling advertisements, the more individuals are prone to developing positive attitudes toward gambling (Bouguettaya et al., 2020). This ultimately contributes to an increase in problem gambling cases among youth.',
 					'Moreover, streamers use online streaming platforms, such as Twitch, to employ various exploitative monetization OG marketing techniques, namely integrating elements based on chance: unpredictable rewards, in-game predictions, and giveaways (Abarbanel et al., 2020). These influencers, along with celebrity-endorsed advertising, often glamorize and romanticize the world of OG, showcasing luxurious lifestyles and big winnings. Adolescents, in their formative years, are particularly susceptible to these tactics as they see these influencers as their role models. This type of OG marketing is still within the lines of Twitch gambling legislation, causing concern for the safety of young, naïve streamer enthusiasts.',
@@ -51,11 +51,139 @@ export const drafts: Tab[] = [
 			{
 				title: '6.0 Conclusion',
 				body: [
-					'Consequently, more efforts are required to address these concerns and develop responsible gambling practices as beyond psychological consequences, they also raise ethical and legal questions. The exploitability of these behaviours, particularly among younger individuals, demands for stricter legal frameworks that are to be obeyed so as the vulnerable young ones are protected. Stricter obedience to legal frameworks and a deeper understanding of SCF, its effects on mental health, the negative impact on one’s financial situation, and how it ties into the addictive gaming mechanics like Gacha games are essential to promote responsible OG and mitigate potential harm. One way to prevent youth OG, and discouraging it all together in general, is the (enforced) requirement of verifying one’s identity during the registration stage. In essence, when an individual registers an account on an OG website, they must upload an image of themself holding their ID card. This extra step makes sure the individual is at least of age. Moreover, users are generally put off by multi-step registrations on any website, and with the need of an identity verification, it only diminishes their will to continue as their anonymity is further reduced. To ensure that users are well-informed and protected while engaging in OG, both legal measures and educational initiatives can curb the psychological impacts induced by it.'
+					"Consequently, more efforts are required to address these concerns and develop responsible gambling practices as beyond psychological consequences, they also raise ethical and legal questions. The exploitability of these behaviours, particularly among younger individuals, demands for stricter legal frameworks that are to be obeyed so as the vulnerable young ones are protected. Stricter obedience to legal frameworks and a deeper understanding of SCF, its effects on mental health, the negative impact on one's financial situation, and how it ties into the addictive gaming mechanics like Gacha games are essential to promote responsible OG and mitigate potential harm. One way to prevent youth OG, and discouraging it all together in general, is the (enforced) requirement of verifying one's identity during the registration stage. In essence, when an individual registers an account on an OG website, they must upload an image of themself holding their ID card. This extra step makes sure the individual is at least of age. Moreover, users are generally put off by multi-step registrations on any website, and with the need of an identity verification, it only diminishes their will to continue as their anonymity is further reduced. To ensure that users are well-informed and protected while engaging in OG, both legal measures and educational initiatives can curb the psychological impacts induced by it."
 				]
 			}
 		],
-		references: [],
+		references: [
+			{
+				author: 'Abarbanel, B., & Johnson, M. (2020).',
+				title: 'Gambling engagement mechanisms in Twitch live streaming.',
+				publisher: 'International Gambling Studies, 20',
+				issuePage: '(3), 393-413.',
+				url: 'https://doi.org/10.1080/14459795.2020.1766097'
+			},
+			{
+				author: 'Armitage, R. (2021).',
+				title: 'Gambling among adolescents: an emerging public health problem.',
+				publisher: 'The Lancet Public Health, 6',
+				issuePage: '(3), e143.',
+				url: 'https://doi.org/10.1016/S2468-2667(21)00026-8'
+			},
+			{
+				author:
+					"Bouguettaya, A., Lynott, D., Carter, A., Zerhouni, O., Meyer, S., Ladegaard, I., Gardner, J., & O'Brien, K. (2020).",
+				title:
+					'The relationship between gambling advertising and gambling attitudes, intentions and behaviours: a critical and meta-analytic review.',
+				publisher: 'Current Opinion in Behavioral Sciences, 31, ',
+				issuePage: '89-101.',
+				url: 'https://doi.org/10.1016/j.cobeha.2020.02.010'
+			},
+			{
+				author: 'Downs, C., & Woolrych, R. (2010).',
+				title: 'Gambling and debt: the hidden impacts on family and work life.',
+				publisher: 'Community, Work & Family, 13',
+				issuePage: '(3), 311-328.',
+				url: 'https://doi.org/10.1016/S2468-2667(21)00026-8'
+			},
+			{
+				author: 'Eadington, W. R. (2008).',
+				title: 'Roll the Bones: The History of Gambling.',
+				publisher: 'Journal of Gambling Issues, 21, ',
+				issuePage: '135.',
+				url: 'https://doi.org/10.4309/jgi.2008.21.18'
+			},
+			{
+				author: 'Gainsbury, S. M. (2015).',
+				title:
+					'Online Gambling Addiction: The Relationship Between Internet Gambling and Disordered Gambling.',
+				publisher: 'Current Addiction Reports, 2',
+				issuePage: '(2), 185-193.',
+				url: 'https://doi.org/10.1007/s40429-015-0057-8'
+			},
+			{
+				author: '',
+				title: '',
+				publisher: 'Gambling | Definition, History, games, & Facts.',
+				issuePage: '(2023, October 26). Encyclopedia Britannica.',
+				url: 'https://www.britannica.com/topic/gambling/History'
+			},
+			{
+				author: '',
+				title: '',
+				publisher: 'Games Ratings Authority.',
+				issuePage: '(n.d.).',
+				url: 'https://gamesratingauthority.org.uk/RatingBoard/ratings'
+			},
+			{
+				author: 'Lakić, N., Bernik, A., & Čep, A. (2023).',
+				title: 'Addiction and Spending in Gacha Games.',
+				publisher: 'Information, 14',
+				issuePage: '(7), 399.',
+				url: 'https://doi.org/10.3390/info14070399'
+			},
+			{
+				author: 'Livazović, G., & Bojčić, K. (2019).',
+				title:
+					'Problem gambling in adolescents: What are the psychological, social and financial consequences?',
+				publisher: 'BMC Psychiatry, 19',
+				issuePage: '(1), 308.',
+				url: 'https://doi.org/10.1186/s12888-019-2293-2'
+			},
+			{
+				author: 'López-González, H., Estévez, A., & Griffiths, M. D. (2017).',
+				title: 'Marketing and Advertising Online Sports Betting: A problem gambling perspective.',
+				publisher: 'Journal of Sport & Social Issues, 41',
+				issuePage: '(3), 256-272.',
+				url: 'https://doi.org/10.1177/0193723517705545'
+			},
+			{
+				author: 'Ltd, R. a. M. (n.d.).',
+				title: '',
+				publisher:
+					'Online Gambling Market Size, Share & Trends Analysis Report By Type (Sports Betting, Casinos, Poker, Bingo), By Device (Desktop, Mobile), By Region (North America, Europe, APAC, Latin America, MEA), And Segment Forecasts, 2023 - 2030.',
+				issuePage: 'Research and Markets Ltd 2023.',
+				url: 'https://www.researchandmarkets.com/reports/5017642/online-gambling-market-size-share-and-trends?utm_source=BW&utm_medium=PressRelease&utm_code=289bl7&utm_campaign=1834897+-+Global+Online+Gambling+Market+Analysis+Report+2023-2030%3a+Ease+of+Access+Through+Increased+Smartphone+and+Internet+Penetration+Bodes+well+for+the+Sector&utm_exec=chdo54prd'
+			},
+			{
+				author:
+					'Montiel, I., Ortega-Barón, J., Basterra-González, A., González-Cabrera, J., & Machimbarrena, J. M. (2021).',
+				title:
+					'Problematic online gambling among adolescents: A systematic review about prevalence and related measurement issues.',
+				publisher: 'Journal of Behavioral Addictions, 10',
+				issuePage: '(3), 566-586.',
+				url: 'https://doi.org/10.1556/2006.2021.00055'
+			},
+			{
+				author: 'Oksanen, A., Sirola, A., Savolainen, I., & Kaakinen, M. (2019).',
+				title:
+					'Gambling patterns and associated risk and protective factors among Finnish young people.',
+				publisher: 'Nordic Studies on Alcohol and Drugs, 36',
+				issuePage: '(2), 161-176.',
+				url: 'https://doi.org/10.1177/1455072518779657'
+			},
+			{
+				author: 'Sarfaraz Khan, & Ali. (2022).',
+				title: '',
+				publisher: 'Online Gambling and Money Laundering: Combatting the Challenges.',
+				issuePage: '',
+				url: 'https://doi.org/10.13140/RG.2.2.21634.56009'
+			},
+			{
+				author: 'Strough, J., Mehta, C. M., McFall, J. P., & Schuller, K. L. (2008).',
+				title: 'Are Older Adults Less Subject to the Sunk-Cost Fallacy Than Younger Adults?',
+				publisher: 'Psychological Science, 19',
+				issuePage: '(7), 650-652.',
+				url: 'https://doi.org/10.1111/j.1467-9280.2008.02138.x'
+			},
+			{
+				author: 'Swanton, T. B., & Gainsbury, S. M. (2020).',
+				title: 'Gambling-related consumer credit use and debt problems: a brief review.',
+				publisher: 'Current Opinion in Behavioral Sciences, 31, ',
+				issuePage: '21-31.',
+				url: 'https://doi.org/10.1016/j.cobeha.2019.09.002'
+			}
+		],
 		download: {
 			url: '/drafts/Draft_v1.pdf',
 			filename: 'Draft_v1.pdf'
