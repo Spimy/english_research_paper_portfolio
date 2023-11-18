@@ -46,7 +46,12 @@ export const drafts: Tab[] = [
 			},
 			{
 				title: '5.0 Counterargument',
-				body: ['WIP']
+				body: [
+					'It is essential to explore alternative viewpoints associated with online gambling (OG) so that we have a more comprehensive understanding of the issue. Ramnerö et al. (2019) highlighted that gambling is a harmless recreational activity since it does not involve any kind of substance abuse and is only an addiction within the human behaviour. They also added that gambling may be considered as a trouble-free exciting activity for most people since it contributes to tax revenues and employment, skyrocketing the economy which benefit the community.',
+					'However, in the context of OG such as gacha games according to Heinisuo (2022), a customizable browser-based simulator that performs random draws, simulating multiple gacha and loot box systems with the basic function of creating a personal category with its own chance percentage is currently available. It allows users to assess risks and rewards without spending money, in other words, gambling. Reverse engineering, when ethically applied, contributes greatly to innovation by allowing a deeper understanding without risking anything. In addition, in spite of indulging in activities like OG, there exists safer ways of acquiring education in order to earn money effectively.',
+					'Watanapongvanich et al. (2021) accentuate that formal education like going to university allows one to have the necessary financial education but not financial literacy. A high level of the latter significantly reduces gambling frequency compared to financial education. Based on their data collected, the government should include financial literacy in the current curriculum, allowing the youth to be equipped with the knowledge and skills of making the right decision.',
+					"Nevertheless, condemning the fact that not all gambles can be predicted - horse betting, the risk is too high for practical loss and it's just a matter of time that the urge of betting kicks the gamblers and they're up to throwing money around again just after they have lost a lot and realized that it's just a waste of precious time and money. Chen et al. (2022) talk about loss-chasing in the speed of play and that gamblers are less likely to voluntarily stop after a loss than after a win, or even if they do, it's most probably due to insufficient funds."
+				]
 			},
 			{
 				title: '6.0 Conclusion',
@@ -78,6 +83,13 @@ export const drafts: Tab[] = [
 				publisher: 'Current Opinion in Behavioral Sciences, 31, ',
 				issuePage: '89-101.',
 				url: 'https://doi.org/10.1016/j.cobeha.2020.02.010'
+			},
+			{
+				author: 'Chen, Z., Doekemeijer, R. A., Noël, X., & Verbruggen, F. (2022).',
+				title: 'Winning and losing in online gambling: Effects on within-session chasing.',
+				publisher: 'PLOS ONE, 17',
+				issuePage: '(8), e0273359.',
+				url: 'https://doi.org/10.1371/journal.pone.0273359'
 			},
 			{
 				author: 'Downs, C., & Woolrych, R. (2010).',
@@ -114,6 +126,13 @@ export const drafts: Tab[] = [
 				publisher: 'Games Ratings Authority.',
 				issuePage: '(n.d.).',
 				url: 'https://gamesratingauthority.org.uk/RatingBoard/ratings'
+			},
+			{
+				author: 'Heinisuo, H. (2022).',
+				title: 'Gacha monetization mechanics : Customizable simulator for random draws.',
+				publisher: 'Trepo.tuni.fi.',
+				issuePage: '',
+				url: 'https://trepo.tuni.fi/handle/10024/141112'
 			},
 			{
 				author: 'Lakić, N., Bernik, A., & Čep, A. (2023).',
@@ -163,6 +182,14 @@ export const drafts: Tab[] = [
 				url: 'https://doi.org/10.1177/1455072518779657'
 			},
 			{
+				author: 'Ramnerö, J., Molander, O., Lindner, P., & Carlbring, P. (2019).',
+				title:
+					'What can be learned about gambling from a learning perspective? A narrative review.',
+				publisher: 'Nordic Psychology, 71',
+				issuePage: '(4), 303–322.',
+				url: 'https://doi.org/10.1080/19012276.2019.1616320'
+			},
+			{
 				author: 'Sarfaraz Khan, & Ali. (2022).',
 				title: '',
 				publisher: 'Online Gambling and Money Laundering: Combatting the Challenges.',
@@ -182,6 +209,14 @@ export const drafts: Tab[] = [
 				publisher: 'Current Opinion in Behavioral Sciences, 31, ',
 				issuePage: '21-31.',
 				url: 'https://doi.org/10.1016/j.cobeha.2019.09.002'
+			},
+			{
+				author:
+					'Watanapongvanich, S., Binnagan, P., Putthinun, P., Khan, M. S. R., & Kadoya, Y. (2021).',
+				title: 'Financial Literacy and Gambling Behavior: Evidence from Japan.',
+				publisher: 'Journal of Gambling Studies, 37',
+				issuePage: '(2), 445-465.',
+				url: 'https://doi.org/10.1007/s10899-020-09936-3'
 			}
 		],
 		download: {
