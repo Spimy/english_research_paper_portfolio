@@ -53,7 +53,7 @@
 					<p>
 						{reference.author}
 						{reference.title} <i>{reference.publisher}</i>{reference.issuePage}
-						<a href={reference.url}>{reference.url}</a>
+						<a href={reference.url} target="_blank">{reference.url}</a>
 					</p>
 				{/each}
 			</footer>
