@@ -186,7 +186,7 @@ export const drafts: Tab[] = [
 				title:
 					'What can be learned about gambling from a learning perspective? A narrative review.',
 				publisher: 'Nordic Psychology, 71',
-				issuePage: '(4), 303–322.',
+				issuePage: '(4), 303-322.',
 				url: 'https://doi.org/10.1080/19012276.2019.1616320'
 			},
 			{
