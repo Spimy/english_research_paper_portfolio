@@ -34,9 +34,16 @@
 				{/if}
 			</p>
 		</header>
-		{#each tab.content as content}
-			<p class="tablist__content__body">{content.body}</p>
-		{/each}
+		<article class="tablist__content__body">
+			{#each tab.content as content}
+				{#if content.title}
+					<h4>{content.title}</h4>
+				{/if}
+				{#each content.body as body}
+					<p>{body}</p>
+				{/each}
+			{/each}
+		</article>
 		<footer class="tablist__content__footer">
 			<h2 class="tablist__content__footer__title">References</h2>
 			{#each tab.references as reference}
@@ -116,9 +123,19 @@
 			}
 
 			&__body {
-				line-height: 2em;
-				text-align: justify;
-				font-size: 1.25rem;
+				h4 {
+					font-size: var(--fs-400);
+				}
+
+				p {
+					line-height: 2em;
+					text-align: justify;
+					font-size: 1.25rem;
+
+					&:not(:first-of-type) {
+						margin-block-start: 1rem;
+					}
+				}
 			}
 
 			&__footer {
