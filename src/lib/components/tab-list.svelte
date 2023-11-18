@@ -36,12 +36,14 @@
 		</header>
 		<article class="tablist__content__body">
 			{#each tab.content as content}
-				{#if content.title}
-					<h4>{content.title}</h4>
-				{/if}
-				{#each content.body as body}
-					<p>{body}</p>
-				{/each}
+				<div>
+					{#if content.title}
+						<h4>{content.title}</h4>
+					{/if}
+					{#each content.body as body}
+						<p>{body}</p>
+					{/each}
+				</div>
 			{/each}
 		</article>
 		<footer class="tablist__content__footer">
@@ -123,6 +125,10 @@
 			}
 
 			&__body {
+				> * + * {
+					margin-block-start: 1rem;
+				}
+
 				h4 {
 					font-size: var(--fs-400);
 				}
