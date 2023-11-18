@@ -34,7 +34,9 @@
 				{/if}
 			</p>
 		</header>
-		<p class="tablist__content__body">{tab.content}</p>
+		{#each tab.content as content}
+			<p class="tablist__content__body">{content.body}</p>
+		{/each}
 		<footer class="tablist__content__footer">
 			<h2 class="tablist__content__footer__title">References</h2>
 			{#each tab.references as reference}
