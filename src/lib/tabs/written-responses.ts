@@ -4,6 +4,7 @@ import type { Tab } from '$lib/types/tab';
 export const writtenResponses: Tab[] = [
 	{
 		query: 'william',
+		tabTitle: 'William',
 		authors: authors.filter((author) => author.firstName === 'William'),
 		title: 'A written response on mental health and underaged gambling',
 		content: [
@@ -48,6 +49,7 @@ export const writtenResponses: Tab[] = [
 	},
 	{
 		query: 'joshua',
+		tabTitle: 'Joshua',
 		authors: authors.filter((author) => author.firstName === 'Joshua'),
 		title:
 			'Assessing the unregulated deceptive marketing of online gambling and its effects on youth: A brief response on significant articles regarding its drawbacks',
@@ -94,6 +96,7 @@ export const writtenResponses: Tab[] = [
 	},
 	{
 		query: 'shaan',
+		tabTitle: 'Shaan',
 		authors: authors.filter((author) => author.firstName === 'Shaan'),
 		title:
 			'A brief written response on negative financial consequences of online gambling amongst the youth',

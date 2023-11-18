@@ -15,6 +15,7 @@ export interface Reference {
 
 export interface Tab {
 	query: string;
+	tabTitle: string;
 	authors: Author[];
 	title: string;
 	content: Content[];

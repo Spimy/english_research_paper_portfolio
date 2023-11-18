@@ -17,9 +17,9 @@
 	<ul role="list" class="tablist__tabs">
 		{#each tabs as tab, index (index)}
 			<li>
-				<a aria-current={tab.query === query ? 'page' : undefined} href="?author={tab.query}"
-					>{tab.authors[0].firstName}</a
-				>
+				<a aria-current={tab.query === query ? 'page' : undefined} href="?author={tab.query}">
+					{tab.tabTitle}
+				</a>
 			</li>
 		{/each}
 	</ul>

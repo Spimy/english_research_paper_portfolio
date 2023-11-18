@@ -4,6 +4,7 @@ import type { Tab } from '$lib/types/tab';
 export const drafts: Tab[] = [
 	{
 		query: 'draft-v1',
+		tabTitle: 'Version 1',
 		authors: [...authors],
 		title: 'First Draft',
 		content: [
