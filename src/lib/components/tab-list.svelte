@@ -46,16 +46,18 @@
 				</div>
 			{/each}
 		</article>
-		<footer class="tablist__content__footer">
-			<h2 class="tablist__content__footer__title">References</h2>
-			{#each tab.references as reference}
-				<p>
-					{reference.author}
-					{reference.title} <i>{reference.publisher}</i>{reference.issuePage}
-					<a href={reference.url}>{reference.url}</a>
-				</p>
-			{/each}
-		</footer>
+		{#if tab.references && tab.references.length > 0}
+			<footer class="tablist__content__footer">
+				<h2 class="tablist__content__footer__title">References</h2>
+				{#each tab.references as reference}
+					<p>
+						{reference.author}
+						{reference.title} <i>{reference.publisher}</i>{reference.issuePage}
+						<a href={reference.url}>{reference.url}</a>
+					</p>
+				{/each}
+			</footer>
+		{/if}
 	</div>
 </div>
 
