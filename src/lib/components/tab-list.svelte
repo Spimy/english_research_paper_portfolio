@@ -157,6 +157,9 @@
 				p {
 					text-indent: -3em;
 					padding-left: 3em;
+					text-align: justify;
+					max-width: 80ch;
+					word-wrap: break-word;
 
 					a {
 						color: var(--clr-accent-100);
