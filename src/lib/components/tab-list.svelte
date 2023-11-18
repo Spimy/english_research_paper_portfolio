@@ -137,6 +137,7 @@
 					line-height: 2em;
 					text-align: justify;
 					font-size: 1.25rem;
+					text-indent: 5em;
 
 					&:not(:first-of-type) {
 						margin-block-start: 1rem;
