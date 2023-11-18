@@ -1,5 +1,10 @@
 import type { Author } from './author';
 
+export interface Content {
+	title?: string;
+	body: string;
+}
+
 export interface Reference {
 	author: string;
 	title: string;
@@ -12,7 +17,7 @@ export interface Tab {
 	query: string;
 	authors: Author[];
 	title: string;
-	content: string;
+	content: Content[];
 	references: Reference[];
 	download: {
 		url: string;
