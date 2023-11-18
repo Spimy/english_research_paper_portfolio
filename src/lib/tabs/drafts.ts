@@ -57,8 +57,8 @@ export const drafts: Tab[] = [
 		],
 		references: [],
 		download: {
-			url: '',
-			filename: ''
+			url: '/drafts/Draft_v1.pdf',
+			filename: 'Draft_v1.pdf'
 		}
 	}
 ];
