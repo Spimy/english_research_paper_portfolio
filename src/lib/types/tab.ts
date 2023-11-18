@@ -2,7 +2,7 @@ import type { Author } from './author';
 
 export interface Content {
 	title?: string;
-	body: string;
+	body: string[];
 }
 
 export interface Reference {
