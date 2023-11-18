@@ -52,7 +52,7 @@
 			<div class="outline__body__intro__hook">
 				<h3>Hook</h3>
 				<p>
-					The pandemic of online gambling is destroying the lives of today’s youth at a drastically
+					The pandemic of online gambling is destroying the lives of today's youth at a drastically
 					increasing rate (Montial et al., 2021).
 				</p>
 			</div>
@@ -212,7 +212,7 @@
 					loss.
 					<br />
 					Gamblers tend to lose a lot of money making them realize that gambling is not profitable until
-					the urge of betting kicks them and they’re up to throwing money around again.
+					the urge of betting kicks them and they're up to throwing money around again.
 					<br />
 					Winning and losing in online gambling: effects on within-session chasing (Chen et al., 2022)
 				</p>
@@ -244,7 +244,7 @@
 			<ul>
 				<li>
 					Form strict and detailed policies on online gambling websites i.e., implement age
-					detection outlines – users should provide ID before logging into OG sites. (Long login
+					detection outlines - users should provide ID before logging into OG sites. (Long login
 					process and less anonymity may discourage young adults)
 				</li>
 				<li>Create an OG crime unit to enforce legal action on fraudulent OG websites.</li>
