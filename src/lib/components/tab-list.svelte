@@ -5,7 +5,7 @@
 	export let title: string;
 	export let tabs: Tab[];
 
-	$: query = $page.url.searchParams.get('author') ?? tabs[0].query;
+	$: query = $page.url.searchParams.get('search') ?? tabs[0].query;
 	$: tab = tabs.filter((response) => response.query === query)[0];
 	$: authors = tab.authors
 		.map((author) => `${author.firstName} ${author.lastName} (${author.studentId})`)
@@ -17,7 +17,7 @@
 	<ul role="list" class="tablist__tabs">
 		{#each tabs as tab, index (index)}
 			<li>
-				<a aria-current={tab.query === query ? 'page' : undefined} href="?author={tab.query}">
+				<a aria-current={tab.query === query ? 'page' : undefined} href="?search={tab.query}">
 					{tab.tabTitle}
 				</a>
 			</li>
