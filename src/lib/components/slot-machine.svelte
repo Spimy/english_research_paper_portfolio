@@ -64,7 +64,7 @@
 >
 	<h1>
 		{#if hasWon}
-			You hit a jackpot!
+			You have hit a jackpot!
 			<div
 				style="
 					position: fixed;
@@ -87,7 +87,7 @@
 				/>
 			</div>
 		{:else}
-			You have not won
+			Hit the jackpot to enter
 		{/if}
 	</h1>
 
@@ -115,12 +115,14 @@
 			</div>
 		{/each}
 	</div>
-	<button on:click|preventDefault class="slot-machine__btn" on:click={roll}>Roll</button>
+	<button on:click|preventDefault class="slot-machine__btn btn btn--invert" on:click={roll}>
+		Spin
+	</button>
 </form>
 
 <style lang="scss">
 	.slot-machine {
-		padding: 2rem;
+		padding: 1rem 3rem;
 
 		> * + * {
 			margin-block-start: 1rem;
@@ -131,22 +133,21 @@
 			justify-content: space-between;
 			gap: 1rem;
 
-			// TODO: will come back to this later
-			// For now, it KIND OF works
 			&__slot {
 				display: grid;
 				place-items: center;
-				font-size: 2rem;
-				background-color: gray;
-				height: 6rem;
-				width: 4rem;
+				font-size: 3rem;
+				background-color: rgba(111, 111, 111, 0.5);
+				height: 7rem;
 				overflow: hidden;
 				text-align: center;
+				flex: 1;
 			}
 		}
 
-		&__btn {
+		button {
 			cursor: pointer;
+			width: 100%;
 		}
 	}
 </style>
