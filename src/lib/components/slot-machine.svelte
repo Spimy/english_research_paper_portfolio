@@ -13,16 +13,6 @@
 	let hasWon = false;
 	let slotMachine: HTMLFormElement;
 
-	function checkWin() {
-		const resultSet = new Set(result);
-		/**
-		 * A set removes all duplicated elements
-		 * That means that if the set contains only 1 element, that means all 3 values were the same
-		 * If all 3 values were the same, then just need to check if it matches the winning emoji
-		 */
-		return resultSet.size === 1 && resultSet.has(winningEmoji);
-	}
-
 	function roll() {
 		// Only randomise if the user has not reached max fails
 		const min = 0;
@@ -48,7 +38,7 @@
 					numFails = 0; // Set number of failed attempts back to 0
 				}
 
-				hasWon = checkWin();
+				hasWon = result.every((res) => res === result[0]);
 				if (hasWon) return slotMachine.requestSubmit();
 				numFails += 1;
 			}
