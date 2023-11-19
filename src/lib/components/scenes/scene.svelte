@@ -72,8 +72,6 @@
 	}
 </script>
 
-<div>Hello</div>
-
 <T.PerspectiveCamera makeDefault near={0.01} far={1000} position={$cameraPosition}>
 	<OrbitControls enableZoom={false} enablePan={false} enableRotate={false} target={orbitTarget} />
 </T.PerspectiveCamera>
