@@ -98,13 +98,15 @@
 
 <style lang="scss">
 	.slot-machine {
+		padding: 2rem;
+
 		> * + * {
 			margin-block-start: 1rem;
 		}
 
 		&__slots {
 			display: flex;
-			justify-content: space-evenly;
+			justify-content: space-between;
 			gap: 1rem;
 
 			// TODO: will come back to this later
