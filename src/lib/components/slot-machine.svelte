@@ -63,7 +63,7 @@
 >
 	<h1>
 		{#if hasWon}
-			You have won
+			You hit a jackpot!
 		{:else}
 			You have not won
 		{/if}
