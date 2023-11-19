@@ -11,6 +11,7 @@
 	let result: string[] = ['❓', '❓', '❓'];
 	let numFails = 0;
 	let hasWon = false;
+	let rolling = false;
 	let slotMachine: HTMLFormElement;
 
 	function roll() {
@@ -39,11 +40,15 @@
 				}
 
 				hasWon = result.every((res) => res === result[0]);
+				rolling = false;
+
 				if (hasWon) return slotMachine.requestSubmit();
 				numFails += 1;
 			}
 		}
 
+		if (rolling) return;
+		rolling = true;
 		randomise();
 		const interval = setInterval(() => randomise(interval), 500);
 	}
