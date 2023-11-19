@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
+	import { quintOut } from 'svelte/easing';
+	import { fly } from 'svelte/transition';
 
 	export let bgText: string | undefined = undefined;
 	export let closed = false;
+	export let enableSlide = false;
 
 	const event = createEventDispatcher<{ closed: void }>();
 
@@ -13,7 +16,10 @@
 </script>
 
 {#if typeof bgText !== 'undefined' || !closed}
-	<div class="modal-container">
+	<div
+		class="modal-container"
+		out:fly={{ x: 2000, duration: enableSlide ? 1000 : 0, easing: quintOut }}
+	>
 		{#if closed}
 			<div class="modal-container__closed-content">
 				<h1>{bgText}</h1>
