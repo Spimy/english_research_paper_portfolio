@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import { Confetti } from 'svelte-confetti';
 	import { cubicInOut } from 'svelte/easing';
 	import { fly } from 'svelte/transition';
 
@@ -64,6 +65,27 @@
 	<h1>
 		{#if hasWon}
 			You hit a jackpot!
+			<div
+				style="
+					position: fixed;
+					top: -50px;
+					left: 0;
+					height: 100vh;
+					width: 100vw;
+					display: flex;
+					justify-content: center;
+					overflow: hidden;
+					pointer-events: none;"
+			>
+				<Confetti
+					x={[-5, 5]}
+					y={[0, 0.1]}
+					infinite
+					duration={5000}
+					amount={200}
+					fallDistance="100vh"
+				/>
+			</div>
 		{:else}
 			You have not won
 		{/if}
