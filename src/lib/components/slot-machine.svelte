@@ -58,7 +58,7 @@
 <form
 	bind:this={slotMachine}
 	method="post"
-	action="?/slotMachineWin"
+	action="/?/slotMachineWin"
 	class="slot-machine"
 	use:enhance
 >
