@@ -49,9 +49,30 @@
 				</div>
 
 				<Modal closed={closedModal} on:closed={() => (closedModal = true)}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quas, a temporibus quod
-					quaerat sequi? Quis consequatur, mollitia non magni quaerat impedit veritatis facilis
-					explicabo doloremque, minus ipsa eius adipisci.
+					<div>
+						<h1>Gacha Details</h1>
+						<p>
+							Standard Gacha "Roadmap" is a standard gacha with no time limit. Non-event exclusive
+							cards are available.
+							<br />
+							In this gacha, guaranteed to win 2-star or above at least once per 10 attempts.
+							<br />
+							<br />
+							* In most cases, the base probability of all cards is evenly distributed. If there is a
+							boost or guarantee in effect, please refer to the corresponding rules.
+						</p>
+					</div>
+					<br />
+					<div>
+						<h2>= Rules =</h2>
+						<p>
+							Base probability of winning 5-star item = 100%; guaranteed to win 5-star item at least
+							once per 10 attempts.
+							<br />
+							Base probability of winning 4-star item = 100%; guaranteed to win 4-star item at least
+							once per 10 attempts.
+						</p>
+					</div>
 				</Modal>
 			{/key}
 		{/if}
