@@ -60,6 +60,9 @@
 							<br />
 							* In most cases, the base probability of all cards is evenly distributed. If there is a
 							boost or guarantee in effect, please refer to the corresponding rules.
+							<br />
+							<br />
+							* Click on "Gacha x10" to view the roadmap.
 						</p>
 					</div>
 					<br />
