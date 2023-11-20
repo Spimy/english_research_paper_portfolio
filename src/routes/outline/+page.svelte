@@ -42,6 +42,8 @@
 				</a>
 			</p>
 		</div>
+		<br />
+		<a href="/Outline.pdf" download="Outline.pdf">Download PDF</a>
 	</header>
 
 	<hr />
@@ -274,6 +276,10 @@
 			font-size: var(--fs-400);
 		}
 
+		a {
+			color: var(--clr-accent-100);
+		}
+
 		p,
 		li {
 			line-height: 2em;
@@ -290,17 +296,9 @@
 		}
 
 		&__header {
-			h2 {
-				text-transform: uppercase;
-			}
-
 			h2,
 			p {
 				display: inline-block;
-			}
-
-			a {
-				color: var(--clr-accent-100);
 			}
 		}
 
