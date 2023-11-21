@@ -3,7 +3,7 @@
 	import { faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 	import { onMount } from 'svelte';
 	import Fa from 'svelte-fa';
-	import type { ActionData, PageServerData } from './$types';
+	import type { ActionData, PageServerData, SubmitFunction } from './$types';
 
 	export let data: PageServerData;
 	export let form: ActionData;
@@ -41,6 +41,12 @@
 	function closeEdit(index: number) {
 		editingIndices = editingIndices.filter((i) => i !== index);
 	}
+
+	const deleteLocalFeedback: SubmitFunction = ({ formData }) => {
+		const id = formData.get('id')!;
+		userFeedbackIds = userFeedbackIds.filter((i) => i !== id);
+		localStorage.setItem('userFeedbacks', JSON.stringify(userFeedbackIds));
+	};
 </script>
 
 <section class="feedbacks">
@@ -63,7 +69,13 @@
 			/>
 			{#if form?.errors?.feedback}<small>{form.errors.feedback}</small>{/if}
 		</div>
-		<button type="submit" class="btn btn--invert">Post Feedback</button>
+		<button
+			type="submit"
+			class="btn btn--invert"
+			on:click={(event) => event.stopImmediatePropagation()}
+		>
+			Post Feedback
+		</button>
 	</form>
 
 	{#if data.feedbacks.length > 0}
@@ -82,7 +94,7 @@
 										Edit <Fa icon={faPenToSquare} />
 									{/if}
 								</button>
-								<form action="?/deleteFeedback" method="POST" use:enhance>
+								<form action="?/deleteFeedback" method="POST" use:enhance={deleteLocalFeedback}>
 									<input type="text" name="id" id="id" value={feedback.id} hidden />
 									<button type="submit">
 										Delete <Fa icon={faTrashCan} />
