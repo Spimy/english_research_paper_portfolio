@@ -23,7 +23,7 @@
 				userFeedbacks = [form.newFeedback, ...userFeedbacks];
 			}
 			localStorage.setItem('userFeedbacks', JSON.stringify(userFeedbacks));
-			toggleEdit(data.feedbacks.findIndex((feedback) => feedback.id === form?.newFeedback?.id));
+			closeEdit(data.feedbacks.findIndex((feedback) => feedback.id === form?.newFeedback?.id));
 		}
 	}
 
@@ -38,6 +38,10 @@
 			return;
 		}
 
+		closeEdit(index);
+	}
+
+	function closeEdit(index: number) {
 		editingIndices = editingIndices.filter((i) => i !== index);
 	}
 </script>
