@@ -16,10 +16,10 @@
 				userFeedbackIds.length === 0 ||
 				userFeedbackIds.some((feedbackId) => feedbackId !== form?.newFeedback?.id)
 			) {
-				userFeedbackIds = [form.newFeedback.id, ...userFeedbackIds];
+				userFeedbackIds = [...new Set([form.newFeedback.id, ...userFeedbackIds]).values()];
 			}
 
-			localStorage.setItem('userFeedbacks', JSON.stringify([...new Set(userFeedbackIds).values()]));
+			localStorage.setItem('userFeedbacks', JSON.stringify(userFeedbackIds));
 			closeEdit(data.feedbacks.findIndex((feedback) => feedback.id === form?.newFeedback?.id));
 		}
 	}
@@ -44,7 +44,7 @@
 
 	const deleteLocalFeedback: SubmitFunction = ({ formData }) => {
 		const id = formData.get('id')!;
-		userFeedbackIds = userFeedbackIds.filter((i) => i !== id);
+		userFeedbackIds = [...new Set(userFeedbackIds.filter((i) => i !== id)).values()];
 		localStorage.setItem('userFeedbacks', JSON.stringify(userFeedbackIds));
 	};
 
