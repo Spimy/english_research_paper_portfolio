@@ -14,7 +14,7 @@
 		<div class="feedbacks__form__username">
 			<label for="username">Username</label>
 			<input type="text" name="username" id="username" placeholder="Anonymous" />
-			{#if form?.message && form.for === 'username'}<small>{form.message}</small>{/if}
+			{#if form?.errors?.username}<small>{form.errors.username}</small>{/if}
 		</div>
 		<div class="feedbacks__form__feedback">
 			<label for="feedback">Feedback <span>*</span></label>
@@ -26,7 +26,7 @@
 				rows="10"
 				required
 			/>
-			{#if form?.message && form.for === 'feedback'}<small>{form.message}</small>{/if}
+			{#if form?.errors?.feedback}<small>{form.errors.feedback}</small>{/if}
 		</div>
 		<button class="btn btn--invert">Post Feedback</button>
 	</form>

@@ -481,18 +481,27 @@ export const actions: Actions = {
 		const username = form.get('username') || 'Anonymous';
 		const feedback = form.get('feedback');
 
+		const errors = {
+			username: '',
+			feedback: ''
+		};
+
 		if (containsProfanity(username.toString())) {
-			return fail(400, { message: 'Username cannot contain profane words.', for: 'username' });
+			errors.username = 'Username cannot contain profane words.';
 		}
 
 		if (!feedback) {
-			return fail(400, { message: 'Feedback cannot be empty.', for: 'feedback' });
+			errors.feedback = 'Feedback cannot be empty.';
+			return fail(400, { errors: { ...errors } });
 		}
 
 		if (containsProfanity(feedback.toString())) {
-			return fail(400, { message: 'Feedback cannot contain profane words.', for: 'feedback' });
+			errors.feedback = 'Feedback cannot contain profane words.';
 		}
 
+		if (errors.username !== '' || errors.feedback !== '') {
+			return fail(400, { errors: { ...errors } });
+		}
 		const newFeedback = await Feedback.create({
 			username: username.toString(),
 			feedback: feedback.toString()
