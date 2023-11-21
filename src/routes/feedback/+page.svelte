@@ -10,7 +10,7 @@
 
 	let userFeedbackIds: string[] = [];
 	$: {
-		if (form && form.newFeedback) {
+		if (form?.newFeedback) {
 			// If edited that means the list of feedback ids already has the new feedback id
 			if (
 				userFeedbackIds.length === 0 ||
@@ -19,7 +19,7 @@
 				userFeedbackIds = [form.newFeedback.id, ...userFeedbackIds];
 			}
 
-			localStorage.setItem('userFeedbacks', JSON.stringify(userFeedbackIds));
+			localStorage.setItem('userFeedbacks', JSON.stringify([...new Set(userFeedbackIds).values()]));
 			closeEdit(data.feedbacks.findIndex((feedback) => feedback.id === form?.newFeedback?.id));
 		}
 	}
