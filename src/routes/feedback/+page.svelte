@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import type { IFeedback } from '$db/models/feedback.model';
-	import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+	import { faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 	import { onMount } from 'svelte';
 	import Fa from 'svelte-fa';
 	import type { ActionData, PageServerData } from './$types';
@@ -73,13 +73,21 @@
 					<div>
 						<dt>{feedback.username}</dt>
 						{#if userFeedbacks.some((fb) => fb.id === feedback.id)}
-							<button on:click={() => toggleEdit(index)}>
-								{#if editingIndices.includes(index)}
-									Cancel
-								{:else}
-									Edit <Fa icon={faPenToSquare} />
-								{/if}
-							</button>
+							<div>
+								<button on:click={() => toggleEdit(index)}>
+									{#if editingIndices.includes(index)}
+										Cancel
+									{:else}
+										Edit <Fa icon={faPenToSquare} />
+									{/if}
+								</button>
+								<form action="?/deleteFeedback" method="POST" use:enhance>
+									<input type="text" name="id" id="id" value={feedback.id} hidden />
+									<button type="submit">
+										Delete <Fa icon={faTrashCan} />
+									</button>
+								</form>
+							</div>
 						{/if}
 					</div>
 					{#if editingIndices.includes(index)}
@@ -161,6 +169,10 @@
 				div {
 					display: flex;
 					justify-content: space-between;
+
+					div > * {
+						margin-left: 1rem;
+					}
 
 					dt {
 						color: var(--clr-accent-100);

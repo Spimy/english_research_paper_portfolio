@@ -532,5 +532,10 @@ export const actions: Actions = {
 		if (!newFeedback) return {};
 
 		return { newFeedback: feedbackMap([newFeedback]).shift()! };
+	},
+	deleteFeedback: async({request}) => {
+		const form = await request.formData();
+		const id = form.get('id')!;
+		await Feedback.findByIdAndDelete(id);
 	}
 };
