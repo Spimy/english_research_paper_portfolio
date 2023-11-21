@@ -528,12 +528,11 @@ export const actions: Actions = {
 		}
 
 		const newFeedback = await Feedback.findByIdAndUpdate(id, { feedback }, { new: true });
-		console.log(newFeedback);
 		if (!newFeedback) return {};
 
 		return { newFeedback: feedbackMap([newFeedback]).shift()! };
 	},
-	deleteFeedback: async({request}) => {
+	deleteFeedback: async ({ request }) => {
 		const form = await request.formData();
 		const id = form.get('id')!;
 		await Feedback.findByIdAndDelete(id);
