@@ -1,5 +1,6 @@
 import { Feedback, type IFeedback } from '$db/models/feedback.model';
 import { fail, type Actions } from '@sveltejs/kit';
+import type mongodb from 'mongoose';
 import type { PageServerLoad } from '../$types';
 
 const banned_words = [
@@ -459,9 +460,10 @@ function containsProfanity(str: string) {
 	return banned_words.some((word) => str.toLowerCase().split(' ').includes(word.toLowerCase()));
 }
 
-function feedbackMap(feedbacks: IFeedback[]) {
+function feedbackMap(feedbacks: mongodb.HydratedDocument<IFeedback>[]) {
 	return [
 		...feedbacks.map((feedback) => ({
+			id: feedback._id.toString(),
 			username: feedback.username,
 			feedback: feedback.feedback
 		}))
@@ -470,12 +472,11 @@ function feedbackMap(feedbacks: IFeedback[]) {
 
 export const load: PageServerLoad = async () => {
 	const feedbacks = await Feedback.find({}).sort({ createdAt: -1 }).exec();
-	console.log(feedbackMap(feedbacks));
 	return { feedbacks: feedbackMap(feedbacks) };
 };
 
 export const actions: Actions = {
-	default: async ({ request }) => {
+	addFeedback: async ({ request }) => {
 		const form = await request.formData();
 
 		const username = form.get('username') || 'Anonymous';
@@ -502,11 +503,34 @@ export const actions: Actions = {
 		if (errors.username !== '' || errors.feedback !== '') {
 			return fail(400, { errors: { ...errors } });
 		}
+
 		const newFeedback = await Feedback.create({
 			username: username.toString(),
 			feedback: feedback.toString()
 		});
 
-		return { newFeedback: feedbackMap([newFeedback]) };
+		return { newFeedback: feedbackMap([newFeedback]).shift()! };
+	},
+	editFeedback: async ({ request }) => {
+		const form = await request.formData();
+
+		const id = form.get('id')!;
+		const feedback = form.get('feedback');
+
+		if (!feedback) {
+			return fail(400, { errors: { feedback: 'Feedback cannot be empty.', username: '' } });
+		}
+
+		if (containsProfanity(feedback.toString())) {
+			return fail(400, {
+				errors: { feedback: 'Feedback cannot contain profane words.', username: '' }
+			});
+		}
+
+		const newFeedback = await Feedback.findByIdAndUpdate(id, { feedback }, { new: true });
+		console.log(newFeedback);
+		if (!newFeedback) return {};
+
+		return { newFeedback: feedbackMap([newFeedback]).shift()! };
 	}
 };
