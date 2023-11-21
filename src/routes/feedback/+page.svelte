@@ -12,11 +12,16 @@
 	$: {
 		if (form && form.newFeedback) {
 			// If edited that means the list of feedback ids already has the new feedback id
-			if (userFeedbackIds.some((feedbackId) => feedbackId !== form?.newFeedback?.id)) {
+
+			if (
+				userFeedbackIds.length === 0 ||
+				userFeedbackIds.some((feedbackId) => feedbackId !== form?.newFeedback?.id)
+			) {
 				userFeedbackIds = [form.newFeedback.id, ...userFeedbackIds];
-				localStorage.setItem('userFeedbacks', JSON.stringify(userFeedbackIds));
-				closeEdit(data.feedbacks.findIndex((feedback) => feedback.id === form?.newFeedback?.id));
 			}
+
+			localStorage.setItem('userFeedbacks', JSON.stringify(userFeedbackIds));
+			closeEdit(data.feedbacks.findIndex((feedback) => feedback.id === form?.newFeedback?.id));
 		}
 	}
 
