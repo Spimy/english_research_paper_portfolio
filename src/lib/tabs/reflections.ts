@@ -19,8 +19,8 @@ export const reflections: Tab[] = [
 		],
 		references: [],
 		download: {
-			url: '/reflections/23020043_Reflection.pdf',
-			filename: '23020043_Reflection.pdf'
+			url: '/reflections/G1_23020043_Reflection.pdf',
+			filename: 'G1_23020043_Reflection.pdf'
 		}
 	},
 	{
