@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import { fly } from 'svelte/transition';
 	import type { ActionData, PageServerData } from './$types';
 
 	export let data: PageServerData;
@@ -35,12 +34,10 @@
 		<article class="feedbacks__content">
 			<h2>Feedbacks</h2>
 			{#each data.feedbacks as feedback, index (index)}
-				{#key index}
-					<dl in:fly|global={{ x: -100, duration: 300, delay: 300 }}>
-						<dt>{feedback.username}</dt>
-						<dd>{feedback.feedback}</dd>
-					</dl>
-				{/key}
+				<dl>
+					<dt>{feedback.username}</dt>
+					<dd>{feedback.feedback}</dd>
+				</dl>
 			{/each}
 		</article>
 	{/if}
@@ -86,8 +83,6 @@
 		}
 
 		&__content {
-			width: 100%;
-
 			dl {
 				margin-block: 1rem;
 				padding: 1rem;
