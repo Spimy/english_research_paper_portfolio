@@ -47,12 +47,21 @@
 		userFeedbackIds = userFeedbackIds.filter((i) => i !== id);
 		localStorage.setItem('userFeedbacks', JSON.stringify(userFeedbackIds));
 	};
+
+	const blockSubmit: SubmitFunction = ({ submitter }) => {
+		if (submitter instanceof HTMLButtonElement) {
+			submitter.disabled = true;
+			setTimeout(() => {
+				submitter.disabled = false;
+			}, 2000);
+		}
+	};
 </script>
 
 <section class="feedbacks">
 	<h1>Leave a Feedback</h1>
 
-	<form action="?/addFeedback" method="POST" class="feedbacks__form" use:enhance>
+	<form action="?/addFeedback" method="POST" class="feedbacks__form" use:enhance={blockSubmit}>
 		<div class="feedbacks__form__username">
 			<label for="username">Username</label>
 			<input type="text" name="username" id="username" placeholder="Anonymous" />
@@ -69,13 +78,7 @@
 			/>
 			{#if form?.errors?.feedback}<small>{form.errors.feedback}</small>{/if}
 		</div>
-		<button
-			type="submit"
-			class="btn btn--invert"
-			on:click={(event) => event.stopImmediatePropagation()}
-		>
-			Post Feedback
-		</button>
+		<button type="submit" class="btn btn--invert">Post Feedback</button>
 	</form>
 
 	{#if data.feedbacks.length > 0}
