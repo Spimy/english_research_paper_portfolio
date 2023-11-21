@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
-	import type { IFeedback } from '$db/models/feedback.model';
 	import { faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 	import { onMount } from 'svelte';
 	import Fa from 'svelte-fa';
@@ -9,26 +8,20 @@
 	export let data: PageServerData;
 	export let form: ActionData;
 
-	let userFeedbacks: (IFeedback & { id: string })[] = [];
+	let userFeedbackIds: string[] = [];
 	$: {
 		if (form && form.newFeedback) {
-			if (userFeedbacks.some((feedback) => feedback.id === form?.newFeedback?.id)) {
-				userFeedbacks = userFeedbacks.map((feedback) => ({
-					id: feedback.id,
-					username: feedback.username,
-					feedback:
-						feedback.id === form!.newFeedback!.id ? form!.newFeedback!.feedback : feedback.feedback
-				}));
-			} else {
-				userFeedbacks = [form.newFeedback, ...userFeedbacks];
+			// If edited that means the list of feedback ids already has the new feedback id
+			if (userFeedbackIds.some((feedbackId) => feedbackId !== form?.newFeedback?.id)) {
+				userFeedbackIds = [form.newFeedback.id, ...userFeedbackIds];
+				localStorage.setItem('userFeedbacks', JSON.stringify(userFeedbackIds));
+				closeEdit(data.feedbacks.findIndex((feedback) => feedback.id === form?.newFeedback?.id));
 			}
-			localStorage.setItem('userFeedbacks', JSON.stringify(userFeedbacks));
-			closeEdit(data.feedbacks.findIndex((feedback) => feedback.id === form?.newFeedback?.id));
 		}
 	}
 
 	onMount(() => {
-		userFeedbacks = JSON.parse(localStorage.getItem('userFeedbacks') || '[]');
+		userFeedbackIds = JSON.parse(localStorage.getItem('userFeedbacks') || '[]');
 	});
 
 	let editingIndices: number[] = [];
@@ -76,7 +69,7 @@
 				<dl>
 					<div>
 						<dt>{feedback.username}</dt>
-						{#if userFeedbacks.some((fb) => fb.id === feedback.id)}
+						{#if userFeedbackIds.some((feedbackId) => feedbackId === feedback.id)}
 							<div>
 								<button on:click={() => toggleEdit(index)}>
 									{#if editingIndices.includes(index)}
