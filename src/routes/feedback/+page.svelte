@@ -12,7 +12,6 @@
 	$: {
 		if (form && form.newFeedback) {
 			// If edited that means the list of feedback ids already has the new feedback id
-
 			if (
 				userFeedbackIds.length === 0 ||
 				userFeedbackIds.some((feedbackId) => feedbackId !== form?.newFeedback?.id)
