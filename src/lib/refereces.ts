@@ -56,16 +56,17 @@ export const references: Reference[] = [
 	{
 		author: '',
 		title: '',
-		publisher: 'Gambling | Definition, History, games, & Facts.',
-		issuePage: '(2023, October 26). Encyclopedia Britannica.',
-		url: 'https://www.britannica.com/topic/gambling/History'
-	},
-	{
-		author: '',
-		title: '',
 		publisher: 'Games Ratings Authority.',
 		issuePage: '(n.d.).',
 		url: 'https://gamesratingauthority.org.uk/RatingBoard/ratings'
+	},
+	{
+		author:
+			'Glimne, D., Augustyn, A., Jain, P., Hosch, W.L., Lotha, G., Luebering, J.E., Rodriguez, E., Setia, V., Singh, S., & Tikkanen, A. (2023).',
+		title: 'Gambling | Definition, History, games, & Facts.',
+		publisher: 'Encyclopaedia Britannica.',
+		issuePage: '',
+		url: 'https://www.britannica.com/topic/gambling/History'
 	},
 	{
 		author: 'Heinisuo, H. (2022).',
@@ -97,14 +98,6 @@ export const references: Reference[] = [
 		url: 'https://doi.org/10.1177/0193723517705545'
 	},
 	{
-		author: 'Ltd, R. a. M. (n.d.).',
-		title: '',
-		publisher:
-			'Online Gambling Market Size, Share & Trends Analysis Report By Type (Sports Betting, Casinos, Poker, Bingo), By Device (Desktop, Mobile), By Region (North America, Europe, APAC, Latin America, MEA), And Segment Forecasts, 2023 - 2030.',
-		issuePage: 'Research and Markets Ltd 2023.',
-		url: 'https://www.researchandmarkets.com/reports/5017642/online-gambling-market-size-share-and-trends?utm_source=BW&utm_medium=PressRelease&utm_code=289bl7&utm_campaign=1834897+-+Global+Online+Gambling+Market+Analysis+Report+2023-2030%3a+Ease+of+Access+Through+Increased+Smartphone+and+Internet+Penetration+Bodes+well+for+the+Sector&utm_exec=chdo54prd'
-	},
-	{
 		author:
 			'Montiel, I., Ortega-Barón, J., Basterra-González, A., González-Cabrera, J., & Machimbarrena, J. M. (2021).',
 		title:
@@ -127,6 +120,14 @@ export const references: Reference[] = [
 		publisher: 'Nordic Psychology, 71',
 		issuePage: '(4), 303-322.',
 		url: 'https://doi.org/10.1080/19012276.2019.1616320'
+	},
+	{
+		author: 'Research and Markets Ltd. (2023).',
+		title:
+			'Online Gambling Market Size, Share & Trends Analysis Report By Type (Sports Betting, Casinos, Poker, Bingo), By Device (Desktop, Mobile), By Region (North America, Europe, APAC, Latin America, MEA), And Segment Forecasts, 2023 - 2030.',
+		publisher: 'Research and Markets Ltd.',
+		issuePage: '',
+		url: 'https://www.researchandmarkets.com/reports/5017642/online-gambling-market-size-share-and-trends?utm_source=BW&utm_medium=PressRelease&utm_code=289bl7&utm_campaign=1834897+-+Global+Online+Gambling+Market+Analysis+Report+2023-2030%3a+Ease+of+Access+Through+Increased+Smartphone+and+Internet+Penetration+Bodes+well+for+the+Sector&utm_exec=chdo54prd'
 	},
 	{
 		author: 'Sarfaraz Khan, & Ali. (2022).',
