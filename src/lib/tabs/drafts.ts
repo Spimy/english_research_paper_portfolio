@@ -453,7 +453,7 @@ export const drafts: Tab[] = [
 		query: 'draft-v3',
 		tabTitle: 'Version 3',
 		authors: [...authors],
-		title: 'Second Draft',
+		title: 'Third Draft',
 		content: [
 			{
 				title: '1.0 Introduction',
