@@ -69,13 +69,6 @@ export const references: Reference[] = [
 		url: 'https://www.britannica.com/topic/gambling/History'
 	},
 	{
-		author: 'Heinisuo, H. (2022).',
-		title: 'Gacha monetization mechanics : Customizable simulator for random draws.',
-		publisher: 'Trepo.tuni.fi.',
-		issuePage: '',
-		url: 'https://trepo.tuni.fi/handle/10024/141112'
-	},
-	{
 		author: 'Lakić, N., Bernik, A., & Čep, A. (2023).',
 		title: 'Addiction and Spending in Gacha Games.',
 		publisher: 'Information, 14',
@@ -149,6 +142,13 @@ export const references: Reference[] = [
 		publisher: 'Current Opinion in Behavioral Sciences, 31, ',
 		issuePage: '21-31.',
 		url: 'https://doi.org/10.1016/j.cobeha.2019.09.002'
+	},
+	{
+		author: '',
+		title: '',
+		publisher: 'TheoryCrafting Library | KQM TCL.',
+		issuePage: '(n.d.).',
+		url: 'https://library.keqingmains.com/'
 	},
 	{
 		author:
