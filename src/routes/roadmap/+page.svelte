@@ -4,6 +4,7 @@
 	import GachaResult from '$lib/components/gacha-result.svelte';
 	import Modal from '$lib/components/modal.svelte';
 	import Scene from '$lib/components/scenes/scene.svelte';
+	import { gachaResult } from '$lib/gacha-result.js';
 	import { Canvas } from '@threlte/core';
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
@@ -19,6 +20,9 @@
 	onMount(() => {
 		audio.play();
 		showBanner = true;
+
+		// Preload roadmap cards
+		gachaResult.forEach(async (card) => await fetch(card.url));
 	});
 </script>
 
