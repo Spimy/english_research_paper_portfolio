@@ -1,5 +1,5 @@
 import { authors } from '$lib/authors';
-import { references } from '$lib/refereces';
+import { references } from '$lib/references';
 import type { Tab } from '$lib/types/tab';
 
 export const drafts: Tab[] = [

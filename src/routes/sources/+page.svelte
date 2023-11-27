@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { references } from '$lib/refereces';
+	import { references } from '$lib/references';
 </script>
 
 <section class="sources">
