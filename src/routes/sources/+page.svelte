@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { references } from '$lib/references';
+	import type { PageServerData } from './$types';
+
+	export let data: PageServerData;
 </script>
 
 <section class="sources">
@@ -7,7 +9,7 @@
 
 	<a href="/References.pdf" download="References.pdf">Download PDF</a>
 
-	{#each references as reference}
+	{#each data.references as reference}
 		<p>
 			{reference.author}
 			{reference.title} <i>{reference.publisher}</i>{reference.issuePage}
