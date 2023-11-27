@@ -1,7 +1,10 @@
+import { authors } from '$lib/authors';
 import type { Actions } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async () => {};
+export const load: PageServerLoad = async () => {
+	return { authors };
+};
 
 export const actions: Actions = {
 	slotMachineWin: async ({ cookies }) => {

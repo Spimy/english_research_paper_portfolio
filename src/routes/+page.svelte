@@ -1,8 +1,10 @@
 <script lang="ts">
-	import { authors } from '$lib/authors';
 	import AuthorCard from '$lib/components/author-card.svelte';
 	import PokerCard from '$lib/components/poker-card.svelte';
 	import { pages } from '$lib/page';
+	import type { PageServerData } from './$types';
+
+	export let data: PageServerData;
 </script>
 
 <section class="hero">
@@ -12,7 +14,7 @@
 			ENG 1044 - English for Computer Technology Studies
 			<br />
 			<br />
-			— by {authors.map((author) => `${author.firstName} ${author.lastName}`).join(', ')}
+			— by {data.authors.map((author) => `${author.firstName} ${author.lastName}`).join(', ')}
 			<br />
 			<br />
 			August - December 2023
@@ -72,7 +74,7 @@
 	<h1>About Us</h1>
 
 	<div class="authors__card">
-		{#each authors as author}
+		{#each data.authors as author}
 			<AuthorCard info={author} />
 		{/each}
 	</div>

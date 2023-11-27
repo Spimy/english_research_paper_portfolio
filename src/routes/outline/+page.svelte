@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { authors } from '$lib/authors';
+	import type { PageServerData } from "./$types";
+
+	export let data: PageServerData
 </script>
 
 <section class="outline">
@@ -9,7 +11,7 @@
 		<div class="outline__authors">
 			<h2>Group Members</h2>
 			<ol>
-				{#each authors as author}
+				{#each data.authors as author}
 					<li>{author.firstName} {author.lastName} ({author.studentId})</li>
 				{/each}
 			</ol>
