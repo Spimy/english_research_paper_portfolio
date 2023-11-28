@@ -8,7 +8,10 @@ export const authors: Author[] = [
 		lastName: 'Edwin Rene Bonham',
 		studentId: '23020050',
 		course: 'Bachelor of Software Engineering (Hons)',
-		social: [{ icon: faInstagram, url: 'https://www.instagram.com/jb_bru' }],
+		social: [
+			{ icon: faInstagram, url: 'https://www.instagram.com/jb_bru' },
+			{ icon: faGithub, url: 'https://www.github.com/JBBru-helloworld' }
+		],
 		title: 'Gambling Therapist',
 		profileImage: 'https://placehold.co/400'
 	},
