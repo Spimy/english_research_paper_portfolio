@@ -13,6 +13,7 @@
 		<h2 class="card__content__name">
 			{info.firstName}
 			<span>{info.lastName}</span>
+			<span>({info.studentId})</span>
 		</h2>
 		<p class="card__content__info">
 			{info.course}
