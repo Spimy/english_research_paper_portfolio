@@ -5,7 +5,7 @@ import type { Tab } from '$lib/types/tab';
 export const output: Tab[] = [
 	{
 		query: 'output',
-		tabTitle: 'Output',
+		tabTitle: 'Research Paper',
 		authors: [...authors],
 		title: 'International Governments Should Sanction Online Gambling amongst the Youth.',
 		content: [
