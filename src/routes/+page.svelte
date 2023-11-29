@@ -27,19 +27,15 @@
 	<h1>About</h1>
 	<div class="about__content">
 		<p class="about__content__description">
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi ducimus ex autem deleniti,
-			laboriosam nulla rerum laborum harum eum doloribus, architecto similique animi suscipit dicta,
-			obcaecati culpa nam eligendi. Voluptas? Expedita minus, eum deleniti consectetur cumque
-			facilis eaque, est porro quisquam voluptas suscipit perspiciatis nisi maxime quod. Rem id
-			veritatis harum dolorem architecto hic aspernatur sapiente, veniam repudiandae cum minima.
-			Saepe facilis reiciendis omnis vel quia! Reiciendis debitis accusantium sit nesciunt dolores
-			rerum doloremque impedit eveniet cupiditate explicabo enim, facilis esse adipisci, voluptas
-			aliquam fugiat ratione accusamus officiis officia ducimus. Sed libero aspernatur soluta error
-			aut dicta fugit, expedita tenetur doloremque non cupiditate minus sapiente atque! Saepe, modi
-			veritatis. Assumenda nesciunt, porro autem beatae odio ratione commodi unde aperiam accusamus.
-			Corrupti aperiam tempore non eligendi, facilis, et perspiciatis animi veritatis laboriosam
-			consequatur aspernatur? Ea doloribus veritatis fugit. Iure quidem, voluptatem aspernatur fugit
-			iste eius sint et dicta earum velit voluptates!
+			This portfolio outlines the need for further research into online gambling and its effects on
+			youth. We as a group have delved into multifaceted niche topics and found a need to voice our
+			opinions on online gambling specifically as it ties to the topic that was given, IT. Despite
+			online gambling being on the rise, not many have voiced their concerns about this augmented
+			malady, outlining the need for further research and the importance of the coursework we have
+			written. This interactive portfolio in the form of a gambling-like website ironically plays on
+			viewers' cognitive biases to show various techniques employed by online gambling companies and
+			the like. Thus, showing how easy it is to lure young, naïve, gaming and gambling enthusiasts
+			into addiction and socioeconomic vulnerability.
 		</p>
 		<img src="/about.avif" alt="the group 'gambling' because irony is funny" />
 	</div>
