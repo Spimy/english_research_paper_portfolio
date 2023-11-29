@@ -5,8 +5,8 @@
 	export let data: PageServerData;
 </script>
 
-<section class="drafts">
-	<TabList title="Drafts" tabs={data.output} />
+<section class="output">
+	<TabList title="Output" tabs={data.output} />
 </section>
 
 <style lang="scss">
