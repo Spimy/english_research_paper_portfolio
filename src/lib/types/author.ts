@@ -11,6 +11,6 @@ export interface Author {
 	studentId: string;
 	course: string;
 	title: string;
-	profileImage: string;
+	profileImage: string[];
 	social: Social[];
 }

@@ -13,7 +13,7 @@ export const authors: Author[] = [
 			{ icon: faGithub, url: 'https://www.github.com/JBBru-helloworld' }
 		],
 		title: 'Gambling Therapist',
-		profileImage: 'https://placehold.co/400'
+		profileImage: ['https://placehold.co/400', 'https://placehold.co/500']
 	},
 	{
 		firstName: 'William',
@@ -26,7 +26,7 @@ export const authors: Author[] = [
 			{ icon: faGithub, url: 'https://www.github.com/spimy' }
 		],
 		title: 'Professional Gambler',
-		profileImage: 'https://placehold.co/400'
+		profileImage: ['https://placehold.co/400', 'https://placehold.co/500']
 	},
 	{
 		firstName: 'Shaan',
@@ -35,6 +35,6 @@ export const authors: Author[] = [
 		course: 'BSC (Hons) in Computer Science',
 		social: [{ icon: faInstagram, url: 'https://www.instagram.com/_shaan_s' }],
 		title: 'Gambler Psychologist',
-		profileImage: 'https://placehold.co/400'
+		profileImage: ['https://placehold.co/400', 'https://placehold.co/500']
 	}
 ];
