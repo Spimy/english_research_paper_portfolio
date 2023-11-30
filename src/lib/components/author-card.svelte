@@ -7,7 +7,9 @@
 
 <div class="card">
 	<header class="card__header">
-		<img src={info.profileImage} alt="Photo of {info.firstName}" />
+		{#each info.profileImage as profileImage, index (index)}
+			<img src={profileImage} alt="Photo of {info.firstName}" />
+		{/each}
 	</header>
 	<div class="card__content">
 		<h2 class="card__content__name">
@@ -37,10 +39,20 @@
 		text-align: center;
 
 		&__header {
+			position: relative;
+			width: 10rem;
+			aspect-ratio: 1;
+
 			img {
 				border-radius: 50%;
 				aspect-ratio: 1;
-				width: 10rem;
+				width: 100%;
+				position: absolute;
+				transition: opacity 300ms ease-in-out;
+
+				&:hover {
+					opacity: 0;
+				}
 			}
 		}
 
