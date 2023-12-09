@@ -65,6 +65,13 @@
 							* In most cases, the base probability of all cards is evenly distributed. If there is a
 							boost or guarantee in effect, please refer to the corresponding rules.
 							<br />
+							* Royalty Free 3D Chest model by
+							<a
+								href="https://www.turbosquid.com/3d-models/stylized-chest-animations-3d-model-1597758"
+								target="_blank"
+								>solvkart on TurboSquid
+							</a>.
+							<br />
 							* Click on "Gacha x10" to view the roadmap.
 						</p>
 					</div>
