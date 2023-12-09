@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { GachaResult } from '$lib/types/gacha-result';
-	import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 	import { quintOut } from 'svelte/easing';
 	import { fly, scale } from 'svelte/transition';
 	import Chips from './chips.svelte';
@@ -10,15 +10,46 @@
 	let index = 0;
 	let summary = false;
 
+	let audioR: HTMLAudioElement;
+	let audioSR: HTMLAudioElement;
+	let audioSSR: HTMLAudioElement;
+	let audioSummary: HTMLAudioElement;
+
+	onMount(() => {
+		setTimeout(() => {
+			audioR.play();
+		}, 500);
+	});
+
 	function next() {
-		if (index < gachaResult.length - 1) index += 1;
-		else summary = true;
+		if (index < gachaResult.length - 1) {
+			index += 1;
+
+			switch (gachaResult[index].rarity) {
+				case 'R':
+					audioR.play();
+					break;
+				case 'SR':
+					audioSR.play();
+					break;
+				case 'SSR':
+					audioSSR.play();
+					break;
+			}
+		} else {
+			summary = true;
+			audioSummary.play();
+		}
 	}
 
 	const event = createEventDispatcher<{ reroll: void; return: void }>();
 </script>
 
 {#if gachaResult.length > 0}
+	<audio src="/sfx/R.mp3" bind:this={audioR} />
+	<audio src="/sfx/SR.mp3" bind:this={audioSR} />
+	<audio src="/sfx/SSR.mp3" bind:this={audioSSR} />
+	<audio src="/sfx/Summary.mp3" bind:this={audioSummary} />
 	<div class="result">
 		{#if !summary}
 			<div class="result__res" on:click={next} on:keyup={next} role="button" tabindex="0">
@@ -28,8 +59,13 @@
 						alt="gacha result {index + 1}"
 						class:r={gachaResult[index].rarity === 'R'}
 						class:sr={gachaResult[index].rarity === 'SR'}
-						class:ssr={gachaResult[index].rarity === 'SSR'}
-						in:scale={{ duration: 500, opacity: 0.5, start: 1.5, easing: quintOut }}
+						class:ssr--delay={gachaResult[index].rarity === 'SSR'}
+						in:scale={{
+							duration: gachaResult[index].rarity !== 'R' ? 1000 : 500,
+							opacity: 0.5,
+							start: 1.5,
+							easing: quintOut
+						}}
 					/>
 				{/key}
 			</div>
@@ -49,7 +85,7 @@
 								class:sr={result.rarity === 'SR'}
 								class:ssr={result.rarity === 'SSR'}
 								in:scale|global={{
-									duration: 500,
+									duration: 1000,
 									opacity: 0,
 									start: 1.5,
 									delay: i * 100,
@@ -94,6 +130,13 @@
 
 			&.ssr {
 				--_glow: hsl(52, 85%, 49%);
+
+				&--delay {
+					--_glow: hsl(52, 85%, 49%);
+					box-shadow: 0 0 0 1px var(--_glow);
+					transition: animation 0.5s ease-in-out;
+					animation-delay: 0.5s;
+				}
 			}
 		}
 
