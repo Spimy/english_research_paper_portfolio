@@ -1,4 +1,4 @@
-import { faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import type { Author } from './types/author';
 
@@ -23,7 +23,8 @@ export const authors: Author[] = [
 		social: [
 			{ icon: faGlobe, url: 'https://www.spimy.dev' },
 			{ icon: faInstagram, url: 'https://www.instagram.com/william3001_lhw' },
-			{ icon: faGithub, url: 'https://www.github.com/spimy' }
+			{ icon: faGithub, url: 'https://www.github.com/spimy' },
+			{ icon: faLinkedin, url: 'https://www.linkedin.com/in/william-law-hong-waye/' }
 		],
 		title: 'Professional Gambler',
 		profileImage: ['/authors/William/William_2.png', '/authors/William/William_1.png']
