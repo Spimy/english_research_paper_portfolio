@@ -44,6 +44,10 @@
 			max-width: 80ch;
 			word-wrap: break-word;
 
+			a {
+				display: inline;
+			}
+
 			&:not(:first-of-type) {
 				padding-block-start: 1em;
 			}
