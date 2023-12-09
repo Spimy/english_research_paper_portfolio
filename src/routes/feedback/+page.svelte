@@ -127,6 +127,7 @@
 <style lang="scss">
 	.feedbacks {
 		padding: 5rem var(--content-padding) 1rem;
+		min-height: 100vh;
 		min-height: 100dvh;
 
 		h1 {

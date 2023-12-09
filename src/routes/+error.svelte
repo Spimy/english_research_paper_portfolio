@@ -28,7 +28,8 @@
 		display: grid;
 		place-items: center;
 		place-content: center;
-		height: 100svh;
+		height: 100vh;
+		height: 100dvh;
 		text-align: center;
 
 		@include mq(small) {

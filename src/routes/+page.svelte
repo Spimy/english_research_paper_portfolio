@@ -97,7 +97,8 @@
 		background-color: hsla(0, 0%, 0%, 0.2);
 		background-blend-mode: multiply;
 		background-position: center;
-		height: 100svh;
+		height: 100vh;
+		height: 100dvh;
 		display: grid;
 		align-items: center;
 		padding: 0 var(--content-padding);

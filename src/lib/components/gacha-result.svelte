@@ -109,7 +109,8 @@
 
 	.result {
 		padding: 5rem var(--content-padding) 2.7rem;
-		min-height: 100svh;
+		min-height: 100vh;
+		min-height: 100dvh;
 		display: grid;
 		place-items: center;
 
