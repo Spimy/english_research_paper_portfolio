@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Footer from '$lib/components/footer.svelte';
-	// import Modal from '$lib/components/modal.svelte';
+	import Modal from '$lib/components/modal.svelte';
 	import Navbar from '$lib/components/navbar.svelte';
+	import SlotMachine from '$lib/components/slot-machine.svelte';
 	import { onMount } from 'svelte';
-	// import SlotMachine from '$lib/components/slot-machine.svelte';
 	import '../scss/main.scss';
 	import type { LayoutServerData } from './$types';
 
@@ -20,7 +20,7 @@
 	});
 </script>
 
-<!-- <Modal
+<Modal
 	bgText={data.passed === 'true'
 		? undefined
 		: 'You must win the slot machine in order to enter the portfolio.'}
@@ -28,7 +28,7 @@
 	enableSlide={true}
 >
 	<SlotMachine />
-</Modal> -->
+</Modal>
 
 <Navbar />
 
