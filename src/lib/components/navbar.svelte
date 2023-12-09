@@ -184,7 +184,6 @@
 
 				&__menu {
 					position: absolute;
-					color: var(--clr-neutral-200);
 					background-color: var(--clr-neutral-100);
 					width: max-content;
 					display: none;
@@ -198,6 +197,7 @@
 
 					&--link {
 						margin: 1rem;
+						color: var(--clr-neutral-200);
 
 						&[aria-current='page'] {
 							color: var(--clr-accent-100);
