@@ -37,7 +37,13 @@
 			the like. Thus, showing how easy it is to lure young, naïve, gaming and gambling enthusiasts
 			into addiction and socioeconomic vulnerability.
 		</p>
-		<img src="/about.avif" alt="the group 'gambling' because irony is funny" />
+		<iframe
+			src="https://www.youtube.com/embed/vYpOvoLaCM4?si=Kjye4SVvukTnwpKs"
+			title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen
+		/>
 	</div>
 </section>
 
@@ -134,13 +140,15 @@
 				@include mq(large) {
 					margin: 0;
 				}
+
+				@include mq(larger) {
+					max-width: max-content;
+				}
 			}
 
-			img {
-				background-color: red;
-				width: 30rem;
-				height: auto;
-				object-fit: cover;
+			iframe {
+				width: 100%;
+				aspect-ratio: 16 / 9;
 			}
 		}
 	}
