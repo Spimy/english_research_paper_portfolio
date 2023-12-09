@@ -85,8 +85,8 @@
 							<a
 								href="https://www.turbosquid.com/3d-models/stylized-chest-animations-3d-model-1597758"
 								target="_blank"
-								>solvkart on TurboSquid
-							</a>.
+								>solvkart on TurboSquid.
+							</a>
 							<br />
 							* Click on "Gacha x10" to view the roadmap.
 						</p>
@@ -128,6 +128,10 @@
 
 		&.point {
 			cursor: pointer;
+		}
+
+		a {
+			color: var(--clr-accent-100);
 		}
 
 		&__banner {
