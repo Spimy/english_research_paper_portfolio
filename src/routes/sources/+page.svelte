@@ -22,10 +22,14 @@
 	@use '../../scss/abstracts/mixins' as *;
 
 	.sources {
-		display: grid;
-		gap: 2rem;
+		// display: grid;
+		// gap: 2rem;
 		padding: 5rem var(--content-padding) 1rem;
 		line-height: 2em;
+
+		> * + * {
+			margin-block-start: 2rem;
+		}
 
 		h1 {
 			font-size: var(--fs-600);
