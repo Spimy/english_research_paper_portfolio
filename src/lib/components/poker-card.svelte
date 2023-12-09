@@ -104,6 +104,7 @@
 							font-size: 5rem;
 							line-height: 2rem;
 							font-size: serif !important;
+							font-family: 'Courier New', Courier, monospace;
 						}
 					}
 
