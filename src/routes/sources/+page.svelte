@@ -22,13 +22,11 @@
 	@use '../../scss/abstracts/mixins' as *;
 
 	.sources {
-		// display: grid;
-		// gap: 2rem;
 		padding: 5rem var(--content-padding) 1rem;
 		line-height: 2em;
 
 		> * + * {
-			margin-block-start: 2rem;
+			margin-block-start: 1rem;
 		}
 
 		h1 {
@@ -36,6 +34,7 @@
 		}
 
 		a {
+			display: inline-block;
 			color: var(--clr-accent-100);
 		}
 
