@@ -15,6 +15,8 @@
 	let rolling = false;
 	let slotMachine: HTMLFormElement;
 
+	let btnText = 'Spin';
+
 	function roll() {
 		// Only randomise if the user has not reached max fails
 		const min = 0;
@@ -45,6 +47,7 @@
 
 				if (hasWon) return slotMachine.requestSubmit();
 				numFails += 1;
+				btnText = 'Spin Again';
 			}
 		}
 
@@ -116,7 +119,7 @@
 		{/each}
 	</div>
 	<button on:click|preventDefault class="slot-machine__btn btn btn--invert" on:click={roll}>
-		Spin
+		{btnText}
 	</button>
 </form>
 
