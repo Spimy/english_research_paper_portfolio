@@ -21,6 +21,8 @@
 	});
 	const orbitTarget = [50, 0, 0.486] as [x: number, y: number, z: number];
 
+	let audio: HTMLAudioElement;
+
 	onMount(async () => {
 		// Bounce animation by moving the chest's y-position every 200ms
 		setTimeout(() => {
@@ -46,6 +48,8 @@
 	const event = createEventDispatcher<{ animationEnd: void }>();
 
 	function playAnimation() {
+		audio.play();
+
 		// Shake the chest
 		let current = 1;
 		const interval = setInterval(() => {
@@ -71,6 +75,8 @@
 		}, 1500);
 	}
 </script>
+
+<audio src="/sfx/Opening.mp3" bind:this={audio} />
 
 <T.PerspectiveCamera makeDefault near={0.01} far={1000} position={$cameraPosition}>
 	<OrbitControls enableZoom={false} enablePan={false} enableRotate={false} target={orbitTarget} />
