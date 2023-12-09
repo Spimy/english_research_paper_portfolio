@@ -1,8 +1,24 @@
 <script lang="ts">
-	import type { PageServerData } from "./$types";
+	import type { PageServerData } from './$types';
 
-	export let data: PageServerData
+	export let data: PageServerData;
+
+	const title = 'ENG1044 Portfolio - Outline';
+	const description =
+		'The outline of the research paper. This outline was used as a basis for the final paper.';
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:url" content="http://eng1044.spimy.dev" />
+
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+</svelte:head>
 
 <section class="outline">
 	<h1>Outline</h1>

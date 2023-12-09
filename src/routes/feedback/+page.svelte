@@ -56,7 +56,23 @@
 			}, 2000);
 		}
 	};
+
+	const title = 'ENG1044 Portfolio - Feedback';
+	const description =
+		'Have any feedbacks? No need to be shy, you can be fully anonymous in giving us feedbacks.';
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:url" content="http://eng1044.spimy.dev" />
+
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+</svelte:head>
 
 <section class="feedbacks">
 	<h1>Leave a Feedback</h1>

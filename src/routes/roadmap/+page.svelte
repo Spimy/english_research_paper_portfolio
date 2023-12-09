@@ -24,7 +24,23 @@
 		// Preload roadmap cards
 		gachaResult.forEach(async (card) => await fetch(card.url));
 	});
+
+	const title = 'ENG1044 Portfolio - Roadmap';
+	const description =
+		'View our journey of the reseach paper using a gacha-like interactive mechanic.';
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:url" content="http://eng1044.spimy.dev" />
+
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+</svelte:head>
 
 {#if !showResult}
 	<section class="roadmap" class:point={showGacha} out:fade={{ duration: 300, delay: 600 }}>
