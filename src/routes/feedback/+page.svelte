@@ -59,17 +59,9 @@
 </script>
 
 <section class="feedbacks">
-	<h1>Video Presentation</h1>
-	<iframe
-		src="https://www.youtube.com/embed/vYpOvoLaCM4?si=Kjye4SVvukTnwpKs"
-		title="YouTube video player"
-		frameborder="0"
-		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-		allowfullscreen
-	/>
+	<h1>Leave a Feedback</h1>
 
 	<form action="?/addFeedback" method="POST" class="feedbacks__form" use:enhance={blockSubmit}>
-		<h2>Leave a Feedback</h2>
 		<div class="feedbacks__form__username">
 			<label for="username">Username</label>
 			<input type="text" name="username" id="username" placeholder="Anonymous" />
@@ -141,11 +133,6 @@
 			font-size: var(--fs-600);
 		}
 
-		iframe {
-			width: 100%;
-			aspect-ratio: 16 / 9;
-		}
-
 		button {
 			cursor: pointer;
 			justify-self: end;
@@ -170,7 +157,6 @@
 		&__form {
 			display: grid;
 			gap: 1rem;
-			margin-block: 2rem;
 
 			div {
 				display: grid;
