@@ -1,9 +1,14 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 	import { faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+	import MarkdownIt from 'markdown-it';
+	import markdownItSanitizer from 'markdown-it-sanitizer';
 	import { onMount } from 'svelte';
 	import Fa from 'svelte-fa';
 	import type { ActionData, PageServerData, SubmitFunction } from './$types';
+
+	const md = new MarkdownIt();
+	md.use(markdownItSanitizer);
 
 	export let data: PageServerData;
 	export let form: ActionData;
@@ -132,7 +137,7 @@
 							</button>
 						</form>
 					{:else}
-						<dd>{feedback.feedback}</dd>
+						<dd>{@html md.render(feedback.feedback)}</dd>
 					{/if}
 				</dl>
 			{/each}
