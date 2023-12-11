@@ -95,11 +95,11 @@
 					<div>
 						<h2>= Rules =</h2>
 						<p>
-							Base probability of winning 3-star item = 100%; guaranteed to win 5-star item at least
+							Base probability of winning 3-star item = 10%; guaranteed to win 3-star item at least
 							once per 10 attempts.
 							<br />
-							Base probability of winning 2-star item = 100%; guaranteed to win 4-star item at least
-							once per 10 attempts.
+							Base probability of winning 2-star item = 30%; guaranteed to win 2-star item at least once
+							per 10 attempts.
 						</p>
 					</div>
 				</Modal>
