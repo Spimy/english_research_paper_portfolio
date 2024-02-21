@@ -72,6 +72,10 @@ export const reflections: Tab[] = [
 		download: {
 			url: '/reflections/G1_23030935_Reflection.pdf',
 			filename: 'G1_23030935_Reflection.pdf'
+		},
+		grade: {
+			received: 12,
+			maximum: 15
 		}
 	}
 ];
