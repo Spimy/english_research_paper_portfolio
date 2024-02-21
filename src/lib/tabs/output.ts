@@ -66,6 +66,10 @@ export const output: Tab[] = [
 			url: '/ENG1044_4-1_CW3_Gambit.pdf',
 			filename: 'ENG1044_4-1_CW3_Gambit.pdf'
 		},
-		references: [...references]
+		references: [...references],
+		grade: {
+			received: 18.67,
+			maximum: 20
+		}
 	}
 ];
