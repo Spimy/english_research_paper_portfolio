@@ -34,7 +34,7 @@ export const writtenResponses: Tab[] = [
 				author: 'Tait, V., Kipp, C., & Harold, L. M. Jr. (2019).',
 				title: 'A Cross-sectional Study of Age Differences in the Sunk-Cost Fallacy.',
 				publisher: 'Journal of Behavioral and Social Sciences, 6, ',
-				issuePage: '170–179.',
+				issuePage: '170-179.',
 				url: 'https://www.researchgate.net/profile/Veronika-Tait-2/publication/340510802_A_Cross-sectional_Study_of_Age_Differences_in_the_Sunk-Cost_Fallacy/links/625f046f709c5c2adb87a8a4/A-Cross-sectional-Study-of-Age-Differences-in-the-Sunk-Cost-Fallacy.pdf'
 			}
 		],
@@ -65,7 +65,7 @@ export const writtenResponses: Tab[] = [
 				author: 'Abarbanel, B., & Johnson, M. (2020).',
 				title: 'Gambling engagement mechanisms in Twitch live streaming.',
 				publisher: 'International Gambling Studies, 20',
-				issuePage: '(3), 393–413.',
+				issuePage: '(3), 393-413.',
 				url: 'https://doi.org/10.1080/14459795.2020.1766097'
 			},
 			{
@@ -74,14 +74,14 @@ export const writtenResponses: Tab[] = [
 				title:
 					'The relationship between gambling advertising and gambling attitudes, intentions and behaviours: a critical and meta-analytic review.',
 				publisher: 'Current Opinion in Behavioral Sciences, 31, ',
-				issuePage: '89–101.',
+				issuePage: '89-101.',
 				url: 'https://doi.org/10.1016/j.cobeha.2020.02.010'
 			},
 			{
 				author: 'López-González, H., Estévez, A., & Griffiths, M. D. (2017).',
 				title: 'Marketing and Advertising Online Sports Betting: A problem gambling perspective.',
 				publisher: 'Journal of Sport & Social Issues, 41',
-				issuePage: '(3), 256–272.',
+				issuePage: '(3), 256-272.',
 				url: 'https://doi.org/10.1080/14459795.2020.1766097'
 			}
 		],
@@ -112,7 +112,7 @@ export const writtenResponses: Tab[] = [
 				author: 'Downs, C., & Woolrych, R. (2010).',
 				title: 'Gambling and debt: the hidden impacts on family and work life.',
 				publisher: 'Community, Work & Family, 13',
-				issuePage: '(3), 311–328.',
+				issuePage: '(3), 311-328.',
 				url: 'https://doi.org/10.1080/13668803.2010.488096'
 			},
 			{
@@ -126,7 +126,7 @@ export const writtenResponses: Tab[] = [
 				author: 'Swanton, T. B., & Gainsbury, S. (2020).',
 				title: 'Gambling-related consumer credit use and debt problems: a brief review.',
 				publisher: 'Current Opinion in Behavioral Sciences, 31, ',
-				issuePage: '21–31.',
+				issuePage: '21-31.',
 				url: 'https://doi.org/10.1016/j.cobeha.2019.09.002'
 			}
 		],
