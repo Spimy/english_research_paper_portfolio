@@ -21,6 +21,10 @@ export const reflections: Tab[] = [
 		download: {
 			url: '/reflections/G1_23020043_Reflection.pdf',
 			filename: 'G1_23020043_Reflection.pdf'
+		},
+		grade: {
+			received: 13.5,
+			maximum: 15
 		}
 	},
 	{
@@ -43,6 +47,10 @@ export const reflections: Tab[] = [
 		download: {
 			url: '/reflections/G1_23020050_Reflection.pdf',
 			filename: 'G1_23020050_Reflection.pdf'
+		},
+		grade: {
+			received: 13.5,
+			maximum: 15
 		}
 	},
 	{
